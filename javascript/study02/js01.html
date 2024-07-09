@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트</title>
+
+  <script>
+    /* 이스케이프 문자
+     문자열 안에서 입력되고 특정한 기능을 하는 문자
+     문자열 안에서 '\'와 함께 지정한 문자를 입력하고자 하는 경우 이스케이프 문자로 지정된 문자의 기능이 동작함
+
+     \' : 문자로써 작은 따옴표(')를 사용하고자 할 경우 사용
+     \" : 문자로써 큰 따옴표(")를 사용하고자 할 경우 사용
+     \\ : 문자로써 역 슬래시(\)를 사용하고자 할 경우 사용
+     \n : 줄 바꿈 문자
+     \t : tab 기능
+     \f : 폼피드
+     \r : 리턴키
+     \b : 백스페이스
+     \v : 세로 tab 기능
+     */
+
+     /* 논리형 타입(boolean)
+      데이터를 논리적으로 참인지 거짓인지를 구분하는 데이터 타입
+      true, false 2가지 값만 가지고 있음
+      문자열이 아닌 자체적인 데이터 타입이기 때문에 "", '' 사용하지 않고 true, false를 입력
+      주로 데이터 비교시 사용
+
+      자바스크립트에서 true 인 값과 false 인 값
+      true: 숫자 0이 아닌 모든값, 숫자 0.0이 아닌 모든 값, 빈 문자열이 아닌 모든 문자열, true 
+      false: 숫자 0, 숫자 0.0, 숫자 -0, 빈 문자열 "", 빈 문자열 '', null, endefind, false, NaN
+      Boolean(데이터): 결과값을 논리형 타입으로 변환하는 함수
+     */
+
+     /* null, undefined
+      데이터가 없다는 의미의 데이터 타입
+      null: 데이터가 없음, 변수에 기존의 데이터를 저장하여 사용한 후 데이터가 비어있는 상태
+        null에서는 연산이 가능 함, 예를 들면 null + 100 하면 100이 됨(null을 0으로 침)
+        null에 문자열을 더하면 'null+문자' 이렇게 출력 됨 
+      undefined: 데이터가 없음, 변수를 선언한 후 데이터를 한번도 저장하지 않은 상태
+        undefined는 숫자와 연산이 불가능함, 한다면 NaN이 출력 됨
+        undefined에 문자열을 더하면 'undefined+문자' 이렇게 출력 됨
+     */
+
+
+    var str = "역슬래시와\t함께\t사용하는"
+    console.log(str)
+
+  </script>
+
+</head>
+<body>
+  
+  
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    // 변수: 변경이 가능한 수, 변경이 가능한 데이터를 저장하고 있는 메모리 공간, 연산된 결과를 저장하거나 연산에 필요한 데이터를 저장하는 장소
+      // 변수에는 1개의 데이터만 저장 가능, 다른 데이터 입력 시 기존 데이터를 덮음
+      // 한번 저장 된 데이터는 계속 사용 되도 삭제되지 않음
+    // 키워드로 var(es5), let(es6), const(es6)를 사용함
+    // 사용법: 
+    // 1. 키워드 변수명; 
+      // 변수 먼저 선언하고 나중에 필요에 따라 데이터를 저장하여 사용
+    // 2. 키워드 변수명 = 데이터;
+      // 변수를 선언과 동시에 데이터를 저장하여 사용
+    // ex) var a;
+    // ex) var a = 100;
+
+    console.log("Hello world");
+    console.log(100+200);
+    /* 연산식, 연산만 진행함.
+    연산된 내용을 저장하지 않고 프로그램이 끝남
+    */
+    1000 + 2000;
+    var a = 1000 + 2000;
+    console.log(a); // 변수 a에 저장된 데이터를 가져와서 화면에 출력
+    console.log(a + 1000); // 저장된 내용을 가져와서 데이터와 연산
+
+    var b = 2000; // 새로운 변수 선언과 동시에 데이터 입력
+    var c = a + b;  // 새로운 변수 c를 선언하고 기존 변수 a + b의 연산 결과를 c에 저장
+    console.log(c);
+
+    var d;  // 변수만 먼저 선언하여 메모리 공간 확보
+    var e;
+    var f;
+    d = 10; // 선언된 변수에 데이터 입력
+    e = 20;
+    f = d + e;  // 데이터 연산 후 저장
+    console.log(f); // 화면에 저장된 데이터 출력
+
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>

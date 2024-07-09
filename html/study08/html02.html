@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 타이포그라피</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>부트스트랩의 타이포그라피</h2>
+
+        <div>
+            <h3>h1 ~ h6</h3>
+            <!-- 부트스트랩에서 h1 ~ h6 태그를 재정의 해 놓음 -->
+            <!-- 태그 선택자(h1 ~ h6) 및 class(.h1 ~ .h6) 선택자를 모두 재정의 해 놓음 -->
+            <h1>부트스트랩용</h1>
+            <h2>부트스트랩용</h2>
+            <h3>부트스트랩용</h3>
+            <h4>부트스트랩용</h4>
+            <h5>부트스트랩용</h5>
+            <h6>부트스트랩용</h6>
+            <p class="h1">부트스트랩의 class 선택자 .h1</p>
+            <p class="h2">부트스트랩의 class 선택자 .h2</p>
+            <p class="h3">부트스트랩의 class 선택자 .h3</p>
+            <p class="h4">부트스트랩의 class 선택자 .h4</p>
+            <p class="h5">부트스트랩의 class 선택자 .h5</p>
+            <p class="h6">부트스트랩의 class 선택자 .h6</p>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>display</h3>
+            <!-- 부트스트랩에서 h1 보다 더 큰 글자를 출력 해야 할 경우 -->
+            <!-- display-{1 ~ 6} -->
+            <!-- display-6이 h1 보다 더 큼 -->
+            <p class="display-1">h1 보다 더 큰 display-1</p>
+            <p class="display-2">h1 보다 더 큰 display-2</p>
+            <p class="display-3">h1 보다 더 큰 display-3</p>
+            <p class="display-4">h1 보다 더 큰 display-4</p>
+            <p class="display-5">h1 보다 더 큰 display-5</p>
+            <p class="display-6">h1 보다 더 큰 display-6</p>
+
+            <h1>부트스트랩의 h1</h1>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>small</h3>
+            <!-- 부트스트랩에서 small 태그를 재정의 하여 h1 ~ h6 보다 더 작은 제목으로 사용 -->
+            <!-- <small></small> 또는 .small 모두 가능 -->
+            <h1>h1의 글자 크기, <small>small로 입력한 글자 크기</small></h1>
+            <h2>h2의 글자 크기, <span class="small">small로 입력한 글자 크기</span></h2>
+            <h3>h3의 글자 크기, <small>small로 입력한 글자 크기</small></h3>
+            <h4>h4의 글자 크기, <span class="small">small로 입력한 글자 크기</span></h4>
+            <h5>h5의 글자 크기, <small>small로 입력한 글자 크기</small></h5>
+            <h6>h6의 글자 크기, <span class="small">small로 입력한 글자 크기</span></h6>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>글자 정렬하기</h3>
+            <!-- 부트스트랩에서 text-align을 쉽게 사용하도록 재정의함 -->
+            <!-- text-start, text-center, text-end -->
+
+            <div>
+                <h3 class="text-start">왼쪽 정렬, text-start</h3>
+                <h3 class="text-center">가운데 정렬, text-center</h3>
+                <h3 class="text-end">오른쪽 정렬, text-end</h3>
+                
+            </div>
+        </div>
+        
+        <br><hr><br>
+
+        <div>
+            <h3>글자에 줄 긋기, text-decoration</h3>
+            <!-- 부트스트랩에서 text-decoration 속성으 재정의 -->
+            <!-- text-decoration-none, text-underline, text-decoration-line-through -->
+            <p class="text-decoration-underline">글자 아래에 줄 긋기</p>
+            <p class="text-decoration-line-through">글자 중간에 줄 긋기</p>
+            <a href="#" class="text-decoration-none">링크 아래 줄 삭제하기</a>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h3>list의 스타일 없애기</h3>
+            <!-- 부트스트랩에서 ul, ol의 심볼을 제거하기 위한 class를 정의함 -->
+            <!-- list-unstyled -->
+
+            <ul>
+                <li>아메리카노</li>
+                <li>카페라떼</li>
+                <li>에스프레소</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li>아메리카노</li>
+                <li>카페라떼</li>
+                <li>에스프레소</li>
+            </ul>
+            <ol class="list-unstyled">
+                <li>아메리카노</li>
+                <li>카페라떼</li>
+                <li>에스프레소</li>
+            </ol>
+        </div>
+
+    </div>
+</body>
+</html>

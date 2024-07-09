@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 20px dashed lightgray;
+            padding: 50px;
+        }
+
+        .backColorRed1 {background-color: red;}
+        .backColorRed2 {background-color: #ff0000;}
+        .backColorRed3 {background-color: rgb(255, 0, 0);}
+
+        .backClipPadding {background-clip: padding-box;}
+        .backClipContent {background-clip: content-box;}
+
+        .box2 {
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid black;
+        }
+        .back-img1 {background-image: url(../../이미지/장원영1.jpg);}
+        .back-repeat-x { background-repeat: repeat-x;}
+        .back-repeat-y { background-repeat: repeat-y;}
+        .back-repeat-no {background-repeat: no-repeat;}
+
+        .back-pos-center {
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .back-pos-center2 {
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        .back-pos-right-bottom {
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        .back-origin-border {background-origin: border-box;}
+        .back-origin-content {background-origin: content-box;}
+
+        .box2 > p {color: cornflowerblue;}
+        .back-attachment-fixed {background-attachment: fixed;}
+        body {
+            background-image: url(../../이미지/카리나2.jpeg);
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-attachment: fixed;
+        }
+        .bg1 {
+            background: url(../../이미지/카리나3.jpg) no-repeat center;            
+        }
+        .bg2 {background: blue}
+        .back-size-auto {background-size: auto;}
+        .back-size-contain {background-size: contain;}
+        .back-size-cover {background-size: cover;}
+    </style>
+</head>
+<body>
+    <div>
+        <h2>background 사용하기</h2>
+
+        <div>
+            <h3>background-color, background-clip</h3>
+
+            <div class="box backColorRed1">기본값(border)</div>
+            <br>
+            <div class="box backColorRed2 backClipPadding">padding-box 사용</div>
+            <br>
+            <div class="box backColorRed3 backClipContent">content-box 사용</div>
+
+        </div>
+
+        <div>
+            <h3>background-image, background-repeat, background-position</h3>
+
+            <div class="box2 back-img1"> background-image 사용 </div>
+            <br>
+            <div class="box2 back-img1 back-repeat-x"> background-repeat-x</div>
+            <br>
+            <div class="box2 back-img1 back-repeat-y"> background-repeat-y</div>
+            <br>
+            <div class="box2 back-img1 back-repeat-no"> background-repeat-no</div>
+
+            <br><br>
+
+            <div class="box2 back-img1 back-pos-center"></div><br>
+            <div class="box2 back-img1 back-pos-right-bottom"></div><br>
+            <div class="box2 back-img1 back-pos-center2"></div><br>
+
+            <div>
+                <h3>background-origin</h3>
+
+                <div class="box back-img1">기본값</div><br>
+                <div class="box back-img1 back-origin-border">border-box 사용</div><br>
+                <div class="box back-img1 back-origin-content">
+                    content-box 사용</div>
+            </div>
+
+            <br><hr><br>
+
+            <div>
+                <h3>background-attachment</h3>
+
+                <div class="box2 back-img1 back-repeat-no" style="overflow: scroll; height: 300px;">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                    <p>11</p>
+                    <p>12</p>
+                    <p>13</p>
+                    <p>14</p>
+                    <p>15</p>
+                    <p>16</p>
+                    <p>17</p>
+                    <p>18</p>
+                    <p>19</p>
+                    <p>20</p>
+                    <p>21</p>
+                    <p>22</p>
+                    <p>23</p>
+                </div>
+
+                <div class="box2 back-img1 back-repeat-no back-attachment-fixed" style="overflow: scroll; height: 300px;">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                    <p>11</p>
+                    <p>12</p>
+                    <p>13</p>
+                    <p>14</p>
+                    <p>15</p>
+                    <p>16</p>
+                    <p>17</p>
+                    <p>18</p>
+                    <p>19</p>
+                    <p>20</p>
+                    <p>21</p>
+                    <p>22</p>
+                    <p>23</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>background 사용하기</h3>
+                <!-- image, repeat, position, attachment, color 한번에 사용 가능 -->
+
+                <div class="box bg1"></div>
+                <div class="box bg1"></div>
+            </div>
+        </div>
+
+        <br><hr><br>
+        
+        <div>
+            <h3>background-size</h3>
+
+            <div class="box2 back-img1 back-repeat-no back-pos-center back-size-auto">background-size: auto</div>
+            <div class="box2 back-img1 back-repeat-no back-pos-center" style="background-size: 200px;">background-size 200px</div>
+            <div class="box2 back-img1 back-repeat-no back-pos-center" style="background-size: 50%;">background-size: 50%</div>
+            <div class="box2 back-img1 back-repeat-no back-pos-center" style="background-size: 100% 100%;">background-size: 100% 100%</div>
+            <div class="box2 back-img1 back-repeat-no back-pos-center back-size-contain">background-size: contain</div>
+            <div class="box2 back-img1 back-repeat-no back-pos-center back-size-cover">background-size: cover</div>
+            
+
+
+        </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

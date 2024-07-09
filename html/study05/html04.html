@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 인접 형제 선택자 '+': 첫번째로 지정한 태그 바로 다음에 위치하는 동일한 레벨의 태그를 선택하는 태그 */
+        /* #div01 > h4 */
+        /* 한단계 건너의 태그를 선택하고자 할 경우 형제 선택자인 ~를 사용 */
+        #selectTag + h5 {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* 인접 형제 선택자와 달리 지정한 태그와 동일한 레벨의 태그이면 모두 선택함 */
+        #selectTag ~ p {
+            background-color: #222;
+            color: #fff;
+        }
+        #div03 a[href] {
+            background: yellow
+            border 1px solid lightgray;
+            font-weight: normal;
+        }
+        #div04 a[target="_blank"] {
+            padding-right: 30px;
+            background: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>고급 선택자 사용하기</h2>
+
+        <div>
+            <h3>인접 형제 선택자 "+"</h3>
+
+            <div id="div01">
+                <h4 id="selectTag">직접 선택한 태그</h4>
+                <h5>형제 선택자로 선택 할 태그1</h5>
+                <p>형제 선택자로 선택 할 태그2</p>
+                <div>형제 선택자로 선택 할 태그3</div>
+                <p>형제 선택자로 선택 할 태그4</p>
+                <p>형제 선택자로 선택 할 태그5</p>
+            </div>
+
+            <br><br><br><br><br><br>
+
+            <div id="div02">
+                <h4 id="selectTag">직접 선택한 태그</h4>
+                <h5>형제 선택자로 선택 할 태그1</h5>
+                <p>형제 선택자로 선택 할 태그2</p>
+                <div>형제 선택자로 선택 할 태그3</div>
+                <p>형제 선택자로 선택 할 태그4</p>
+                <p>형제 선택자로 선택 할 태그5</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>속성 선택자 사용하기, 기본</h3>
+
+            <div id="div03">
+                <ul>
+                    <li><a>메인 메뉴: </a></li>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="http://www.daum.net">다음 홈페이지: </a></li>
+                    <li><a href="http://www.ndaver.com" target="_blank">네이버 홈페이지</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h3>'=' 선택자</h3>
+
+            <div id="div04">
+                <ul>
+                    <li><a href="https://html.spec.whatwg.org" target="_blank"></a></li>
+                    <li><a href="https://www.w3.org/TR/selectors" target="_self">CSS selector Level3</a></li>
+                    <li><a href="https://www.w3.org/TR/css3-mediaqueries">미디어 쿼리</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

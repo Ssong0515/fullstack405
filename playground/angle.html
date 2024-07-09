@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원 위의 점 좌표 계산</title>
+</head>
+<body>
+    <div>
+        <p>각도 (도 단위): <input type="number" id="angle" value="45"></p>
+        <p>반지름: <input type="number" id="radius" value="100"></p>
+        <button onclick="calculateCoordinates()">좌표 계산</button>
+    </div>
+    <div id="result">result</div>
+
+    <script>
+        function calculateCoordinates() {
+            const angle = document.getElementById('angle').value;
+            const radius = document.getElementById('radius').value;
+            
+            // 각도를 라디안 단위로 변환
+            const angleInRadians = angle * (Math.PI / 180);
+            
+            // 원의 중심이 (0, 0)일 때의 점 좌표 계산
+            const x = radius * Math.cos(angleInRadians);
+            const y = radius * Math.sin(angleInRadians);
+            
+            document.getElementById('result').innerText = `좌표: (${x.toFixed(2)}, ${y.toFixed(2)})`;
+        }
+    </script>
+</body>
+</html>

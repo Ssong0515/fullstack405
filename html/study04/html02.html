@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 400px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .box2 {
+            width: 50%;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 5px dashed gray;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>블록 레벨, 인라인 레벨</h2>
+
+        <h3>h3는 블록 레벨 태그</h3>
+        <p>p, div, dr, hr 태그는 블록 레벨 태그</p>
+        <p>태그가 생성시 하나의 라인 전체를 사용</p>
+
+        <br><br>
+
+        <a href="#">a태그는 인라인 레벨의 태그</a>
+        <input type="text" value="input 태그는 인라인 레벨 태그">
+        <button type="button">button 태그는 인라인 레벨 태그</button>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+        <h2>width/height</h2>
+
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="box red"></div>
+    <br>
+    <div class="box blue"></div>
+
+    <br>
+    <hr><br>
+
+    <div>
+        <h2>box-shadow</h2>
+
+        <div class="box" style="box-shadow: 2px -2px 5px 0px;"></div>
+        <br>
+        <div class="box" style="box-shadow: 5px 5px 15px 5px blue inset;"></div>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+        <h2>border</h2>
+
+        solid
+        <div class="box" style="border-style: solid;"></div>
+        dashed
+        <div class="box" style="border-style: dashed;"></div>
+        double
+        <div class="box" style="border-style: double;"></div>
+        dotted
+        <div class="box" style="border-style: dotted;"></div>
+        none
+        <div class="box" style="border-style: none;"></div>
+        ridge
+        <div class="box" style="border-style: ridge;"></div>
+        groove
+        <div class="box" style="border-style: groove;"></div>
+        inset
+        <div class="box" style="border-style: inset;"></div>
+        outset
+        <div class="box" style="border-style: outset;"></div>
+
+
+        <br>
+        <div class="box" style="border-width: 10px; border-style: solid;"></div>
+        <div class="box" style="border-width: 20px; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-width: 5px 10px; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-width: 5px 10px 15px; border-style: solid;"></div>
+        <div class="box" style="border-width: 5px 10px 15px 20px; border-style: solid;"></div>
+
+
+        <br>
+        <hr><br>
+
+        <div class="box" style="border-color: red; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-top-color: red; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-right-color: red; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-bottom-color: red; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-left-color: red; border-style: solid;"></div>
+        <br>
+        <div class="box" style="border-top-color: red; border-bottom-color: red; border-style: solid;"></div>
+
+        <br>
+        <hr><br>
+
+        <div>
+            <h2>border-radius</h2>
+
+            <div class="box" style="border: 1px solid black;"></div>
+            <br>
+            <div class="box" style="border: 1px solid black; border-radius: 25px;"></div>
+            <br>
+            <div class="box" style="border: 1px solid black; border-radius: 50px;"></div>
+            <br>
+            <hr><br>
+            <div class="box" style="border: 1px solid black; border-radius: 25px 50px;"></div>
+            <br>
+            <div class="box" style="border: 1px solid black; border-radius: 10px 20px 30px;"></div>
+            <br>
+            <div class="box" style="border: 1px solid black; border-radius: 10px 20px 30px 40px;"></div>
+            <br>
+        </div>
+
+        <div>
+            <h3>margin</h3>
+            <div class="box" style="margin: 50px;"></div>
+            <div class="box" style="margin: 100px;"></div>
+            <div class="box" style="margin: 25px 50px;"></div>
+            <div class="box" style="margin: 10px 20px 30px;"></div>
+
+            <div class="box" style="margin: 10px 20px 30px 40px;"></div>
+            <div class="box" style="margin: 25px auto;"></div>
+            상하: 25px, auto (상하는 안되지만 좌우는 auto시 가운데 정렬 됨)
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

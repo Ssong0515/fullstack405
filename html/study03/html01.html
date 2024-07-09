@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <!-- 태그의 id와 스타일 내부에서 선택자 일치!! -->
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS 사용하기 1</title>
+        <!-- CSS: cascading style sheets -->
+        <!-- 적층형 구조로 된 html 디자인 방식 -->
+        <!-- html, css, js는 위에서 아래로 한줄씩 웹브라우저가 실행 -->
+        <!-- 중복 된 css 속성이 있을 경우 cascading 방식 이기 때문에 아래것이 덮어 씀 -->
+        <!-- CSS 우선 순위 1. 인라인 방식 , 2. 외부.내부는 실행 순서에 따름 -->
+        <!-- 주로 외부 스타일 시트 방식을 먼저 적용, 각각 페이지마다 필요에 의해 내부 스타일 시트 방식 사용, 인라인은 특정 몇개만 바꿀때 사용 -->
+
+
+        <!-- 외부 스타일 시트 방식 -->
+        <link rel="stylesheet" href="mystyle.css">
+
+        <!-- 내부 스타일 방식 -->
+        <style>
+            #p2 {
+                color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <!-- 인라인 방식 -->
+            <h2>CSS 우선 순위</h2>
+
+            <p id="p1" style="color: skyblue;">첫번째 p 태그</p>
+            <p id="p2">두번째 p 태그</p>
+            <p id="p3">세번째 p 태그</p>
+        </div>
+    </body>
+</html>
+
+<!-- 선택자: CSS가 디자인 적용을 위해 html 태그를 선택하는 기호 -->

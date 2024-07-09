@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navbar, dropdown</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-down">
+      <div class="container">
+        <a href="#" class="navbar-brand">Logo</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenus">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenus">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">menu 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">menu 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">menu 3</a></li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">menu 4</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">sub-menu-1</a></li>
+                <li><a href="#" class="dropdown-item">sub-menu-2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="#" class="dropdown-item">sub-menu-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+  
+</body>
+</html>

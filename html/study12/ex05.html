@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+  
+<div class="container-fluid m-4">
+  <h2>부트스트랩 모달창</h2>
+  <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#login-popup">Login</button>
+</div>
+
+<div class="modal fade" id="login-popup">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div>
+            <img src="../../움직이는/김유정1.gif" alt="" class="rounded-circle d-block mx-auto" style="width: 200px; height: 200px;">
+          </div>
+          <div class="mb-3">
+            <label for="user-name" class="form-label">Username</label>
+            <input type="text" class="form-control" name="userName" id="user-name" placeholder="Enter Username">
+          </div>
+          <div class="mb-3">
+            <label for="user-passward" class="form-label">Password</label>
+            <input type="password" class="form-control" name="userPassward" id="user-passward" placeholder="Enter Password">
+          </div>
+          <div class="mb-3 d-grid">
+            <button type="button" class="btn btn-success btn-block">Login</button>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label for="remember" class="form-check-label">Remember me</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-between bg-secondary-subtle">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <p>Forgot <a href="#" class="text-black">password?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

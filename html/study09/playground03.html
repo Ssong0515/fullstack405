@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습3</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div>
+      <h3>부트스트랩 기본 버튼</h3>
+      <input type="button" value="input 기본 버튼">
+      <button type="button">button 기본 버튼</button>
+      <button type="button" class="btn">부트스트랩 기본 버튼</button>
+      <button type="button" class="btn btn-outline-warning">부트스트랩 outline 컬러</button>
+      <a href="#" class="btn btn-outline-warning">a 태그 사용</a>
+      <a href="#" class="btn btn-outline-warning btn-link">a 태그 btn-link 사용</a>
+    </div>
+
+    <br>
+
+    <div>
+      <h3>부트스트랩 버튼 크기 설정</h3>
+      <button class="btn btn-warning">기본 크기</button>
+      <button class="btn btn-warning btn-lg">큰 크기</button>
+      <button class="btn btn-warning btn-sm">작은 크기</button>
+
+      <div class="gap-2 d-grid mt-3">
+        <button class="btn btn-warning">기본 크기</button>
+        <button class="btn btn-warning">기본 크기</button>
+      </div>
+    </div>
+
+    <div>
+      <h3>버튼 활성화/비활성화 및 스피너 넣기</h3>
+      <button type="button" class="btn btn-primary">기본 버튼</button>
+      <button type="button" class="btn btn-primary active">활성화 버튼</button>
+      <button type="button" class="btn btn-primary" disabled>비활성화 버튼</button>
+
+      <a href="#" class="btn btn-primary">기본 a 버튼</a>
+      <a href="#" class="btn btn-primary active">활성화 a 버튼</a>
+      <a href="#" class="btn btn-primary disabled">비활성화 a 버튼</a>
+      <br>
+      <br>
+
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-border"></span>
+      </button>
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        로딩중...
+      </button>
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-grow"></span>
+      </button>
+      <button type="button" class="btn btn-primary">
+        <span class="spinner-grow spinner-border-sm"></span>
+        로딩중...
+      </button>
+    </div>
+
+    <br><br>
+
+    <div>
+      <h3>버튼 그룹 사용하기</h3>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary">기본 a 버튼</a>
+        <a href="#" class="btn btn-primary active">활성화 a 버튼</a>
+        <a href="#" class="btn btn-primary disabled">비활성화 a 버튼</a>
+      </div>
+    </div>
+    <div>
+      <h3>버튼 그룹 사용하기</h3>
+      <div class="btn-group-vertical">
+        <a href="#" class="btn btn-primary">기본 a 버튼</a>
+        <a href="#" class="btn btn-primary active">활성화 a 버튼</a>
+        <a href="#" class="btn btn-primary disabled">비활성화 a 버튼</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

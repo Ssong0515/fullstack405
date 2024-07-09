@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습10</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h3>기본 nav</h3>
+    <ul class="nav">
+      <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+
+    <br><br>
+
+    <h3>nav 정렬</h3>
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+
+    <br><br>
+
+    <h3>nav 메뉴 Tabs/Pills</h3>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+
+    <br><br>
+
+    <h3>nav 메뉴 Tabs/Pills 전체크기(nav-justified / nav-fill)</h3>
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li>
+    </ul>
+
+    <br><br>
+
+    <h3>nav 메뉴에 드롭 다운 버튼 사용하기</h3>
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">메뉴3</a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴1</a></li>
+          <li><a href="#" class="dropdown-item">메뉴2</a></li>
+          <li><a href="#" class="dropdown-item">메뉴3</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <br><br>
+    <h3>nav 메뉴 사용 시, 컨텐츠를 동적으로 변경하기</h3>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a href="#section1" class="nav-link active" data-bs-toggle="tab">메뉴1</a></li>
+      <li class="nav-item"><a href="#section2" class="nav-link" data-bs-toggle="tab">메뉴2</a></li>
+      <li class="nav-item"><a href="#section3" class="nav-link" data-bs-toggle="tab">메뉴3</a></li>
+    </ul>
+
+    <br><br>
+    <div class="tab-content">
+      <div id="section1" class="tab-pane active fade show">
+        <h3>section1</h3>
+      </div>
+      <div id="section2" class="tab-pane fade">
+        <h3>section2</h3>
+      </div>
+      <div id="section3" class="tab-pane fade">
+        <h3>section3</h3>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</body>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

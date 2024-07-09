@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 18</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+  <style>
+    body {
+      position: relative;
+    }
+
+    .contentBox {
+      height: 800px;
+      padding: 100px 30px;
+    }
+  </style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-offset="50" data-bs-target="#myNavbar">
+  <!-- 스크롤 스파이 -->
+  <!-- 웹 페이지 화면을 스크롤 시, 네비게이션 바에 있는 메뉴가 해당 영역을 표시 -->
+  <!-- body 태그에 사용자 속성 data-bs-spy-"scroll"을 추가 -->
+  <!-- body 태그에 사용자 속성 data-bs-target="네비게이션 바의 선택자" -->
+  <!-- body 태그에 사용자 설정 data-bs-offset을 추가하고 값을 설정(상단 네비게이션 바의 fixed 설정으로 인하여 스크롤과 상관없이 늘 화면에 있어야 하기 때문에, 네비게이션 바 만큼 내려서 보이도록 하기 위함) -->
+  <!-- 네이게이션 바와 컨텐츠 영역을 설정 (네비게이션 바의 메뉴와 컨텐츠 영역의 개수가 같아야 함) -->
+  <!-- 컨텐츠 영역 태그에 id 속성을 설정하고 네비게이션 바의 a태그의 href속성과 연동 -->
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="myNavbar">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">Logo</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a href="#section1" class="nav-link">Section 1</a></li>
+        <li class="nav-item"><a href="#section2" class="nav-link">Section 2</a></li>
+        <li class="nav-item"><a href="#section3" class="nav-link">Section 3</a></li>
+        <li class="nav-item"><a href="#section4" class="nav-link">Section 4</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="section1" class="container-fluid bg-primary-subtle contentBox">
+    <h1>첫번째 섹션</h1>
+    <p>스크롤 스파이를 사용하여 컨텐츠 영역과 네비게이션 바를 연동</p>
+    <p>스크롤을 움직이면 위치에 따라 네비게이션 바의 메뉴가 active 됨</p>
+  </div>
+
+  <div id="section2" class="container-fluid bg-secondary-subtle contentBox">
+    <h1>두번째 섹션</h1>
+    <p>스크롤 스파이를 사용하여 컨텐츠 영역과 네비게이션 바를 연동</p>
+    <p>스크롤을 움직이면 위치에 따라 네비게이션 바의 메뉴가 active 됨</p>
+  </div>
+
+  <div id="section3" class="container-fluid bg-info-subtle contentBox">
+    <h1>세번째 섹션</h1>
+    <p>스크롤 스파이를 사용하여 컨텐츠 영역과 네비게이션 바를 연동</p>
+    <p>스크롤을 움직이면 위치에 따라 네비게이션 바의 메뉴가 active 됨</p>
+  </div>
+
+  <div id="section4" class="container-fluid bg-warning-subtle contentBox">
+    <h1>네번째 섹션</h1>
+    <p>스크롤 스파이를 사용하여 컨텐츠 영역과 네비게이션 바를 연동</p>
+    <p>스크롤을 움직이면 위치에 따라 네비게이션 바의 메뉴가 active 됨</p>
+  </div>
+  
+</body>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 2px solid black;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>display 속성 사용하기</h2>
+        <!-- display 속성은 지정 된 태그를 블록 또는 인라인 레벨로 변경 해주는 속성이다 -->
+
+        <!-- div 태그는 블록 레벨 태그 -->
+        <div class="box">div 태그</div>
+        <div class="box" style="display: inline;">div 태그, display: inline 사용</div>
+
+        <br>
+
+        <!-- span 태그는 인라인 레벨 태그 -->
+        <!-- 인라인 레벨 태그는 컨텐츠의 width가 해당 width가 됨 -->
+        <!-- margin 좌,우는 설정 가능 / 상,하는 설정 불가능 -->
+        <!-- padding 값은 모두 설정 가능 -->
+        <span class="box">span 태그</span>
+        <span class="box" style="margin: 50px; padding: 50px;">span 태그</span>
+        <span class="box" style="margin: 50px;">span 태그</span>        
+
+        <span class="box" style="display: block;">span 태그, display: block 사용</span>
+
+        <br><br>
+
+        <!-- inline-block은 block 특성(width, height, 모든 margin 속성 값 변경 가능)과 
+            inline 특성(한 줄에 여러개 사용 가능) 모두 가능한 형태 -->
+        <span class="box">span 태그</span>
+        <br>
+        <span class="box">span 태그</span>
+        <span class="box" style="display: inline-block; padding: 50px;">span 태그</span>
+        <span class="box">span 태그</span>
+        <br>
+        <span class="box">span 태그</span>
+
+        <br><hr><br>
+
+        <div class="box">div 태그, display 속성 기본값</div>
+        <div class="box" style="display: none;">div 태그, display 속성 none</div>
+        <div class="box" style="opacity: 0.0;">div 태그, opacity 속성 0.0</div>
+        <div class="box" style="visibility: hidden;">div 태그, visibility 속성</div>
+
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

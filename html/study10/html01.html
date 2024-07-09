@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nav bar</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>nav bar 사용하기</h2>
+
+    <div>
+      <h3>기본 navbar</h3>
+      <!-- 부트스트랩에서 화면 상단의 네비게이션 바를 쉽게 사용 할 수 있도록 미리 디자인 하여 제공 -->
+      <!-- nav 태그에 주로 사용, div로도 사용 가능 -->
+      <!-- 네비게이션바로 사용 할 nav 태그에 .navbar, .navbar-expand-{반응형크기}를 추가하여 사용 -->
+      <!-- 자식 태그로 ul 태그 사용, class에 navbar-nav를 추가 -->
+      <!-- ul 태그의 자식 태그로 li 사용, class에 .nav-item을 추가하여 메뉴 표시 -->
+      <!-- li 태그의 자식 태그로 a 태그 사용, class에 .nav-link를 추가하여 메뉴 클릭 시 화면 변경 기능 -->
+
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item"><a href="#" class="nav-link">메뉴1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴3</a></li> -->
+
+          <a href="#" class="nav-link">메뉴1</a>
+          <a href="#" class="nav-link">메뉴2</a>
+          <a href="#" class="nav-link">메뉴3</a>
+        </ul>
+      </nav>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+      <h3>세로 형태 navbar</h3>
+      <!-- 잘 사용하진 않음 -->
+      <!-- .navbar-expand-{반응형크기} 부분을 제거하면 세로 형태의 네비게이션 바를 사용 할 수 있음 -->
+
+      <nav class="navbar bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">메뉴1</a>
+          <a href="#" class="nav-link">메뉴2</a>
+          <a href="#" class="nav-link">메뉴3</a>
+        </ul>
+      </nav>
+
+      <h3>세로 형태의 navbar 실제 사용 모습</h3>
+      <div class="border border-dark border-2 m-2 p-2">
+        <header>
+          <h1 class="text-center m-4">헤더 영역</h1>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="container-fluid">
+            <ul class="navbar-nav">
+              <a href="#" class="nav-link">메뉴1</a>
+              <a href="#" class="nav-link">메뉴2</a>
+              <a href="#" class="nav-link">메뉴3</a>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="container">
+          <div class="row">
+            <aside class="col-3">
+              <nav class="navbar bg-dark navbar-dark">
+                <div class="container fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">사이드 메뉴1</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">사이드 메뉴2</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">사이드 메뉴3</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </aside>
+
+            <div class="col-10">col-10</div>
+          </div>
+        </main>
+
+        <footer class="border-top">
+          <h1 class="text-center m-4">푸터 영역</h1>
+        </footer>
+
+      </div>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>메뉴 정렬, 테마 컬러, 메뉴 활성화/비활성화</h3>
+      <!-- .justify-content-{정렬방식}을 class에 추가하여 메뉴를 정렬할 수 있음 -->
+      <!-- .bg-{테마컬러}를 class에 추가하여 네비게이션 바의 색상을 변경할 수 있음 -->
+      <!-- .navbar-dark, .navbar-light의 2가지 형태의 네비게이션 바 메뉴의 글자색을 지정할 수 있음 -->
+      <!-- a태그 클래스에 .active, .disabled를 추가하여 네비게이션바의 메뉴를 활성화/비활성화 할 수 있음 -->
+
+      <h4>justify-content-start (기본값)</h4>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid justify-content-start">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h4>justify-content-center</h4>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h4>justify-content-end</h4>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <br><br>
+
+      <h4>테마 컬러</h4>
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+        <div class="container-fluid justify-content-start">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>네비게이션 바에 브랜드 로고 넣기, 네비게이션바에 텍스트 넣기</h3>
+      <!-- 네비게이션 바의 자식 태그로 a 태그를 추가하고, class에 .navbar-brand를 사용하여 네비게이션 바에 브랜드 로고용 텍스트를 입력 가능 -->
+      <!-- a 태그의 자식 태그로 img 태그를 사용하여 로고 텍스트 대신 로고 이미지를 출력 할 수 있음 -->
+      <!-- 네비게이션 바의 자식 태그로 span 태그를 추가하고, class에 .navbar-text를 사용하여 네비게이션 바에 메뉴 버튼이 아닌 일반 텍스트 추가 가능 -->
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Logo</a>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand"><img src="../../움직이는/카리나4.gif" alt="" style="height: 80px; width: 80px;" class="rounded-pill"></a>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand"><img src="../../움직이는/카리나1.gif" alt="" style="width: 80px; height: 80px;" class="rounded-pill"></a>
+          <span class="navbar-text">네비게이션 바 안에 일반 텍스트</span>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>네비게이션바 메뉴 접기/펴기</h3>
+      <!-- 반응형 크기에 따라 네비게이션바의 메뉴를 화면에 show/hide 하는 방식 -->
+      <!-- 기본 네비게이션바의 자식 태그로 button 태그 추가, 화면 크기에 따라 메뉴를 숨기고 보여줄 영역인 div 태그를 추가 -->
+        <!-- .navbar-brand class를 사용한 a 태그의 형제 태그로 button 태그 추가 -->
+        <!-- button 태그의 class에 .navbar-toggler를 추가, 사용자 속성인 data-bs-toggle="collapse"를 추가 -->
+        <!-- button 태그에 사용자 속성인 data-bs-target 속성을 추가하고 보였다가 숨겼다가 할 영역의 id값을 지정 -->
+        <!-- button 태그의 아이콘으로 span 태그를 사용하고, class에 .navbar-toggler-icon을 추가 -->
+        <!-- 네비게이션바의 메뉴인 ul 태그에 div 부모 태그로 추가 -->
+        <!-- div 태그의 class에 .collapse, .navbar-collapse를 추가하고 id 속성을 사용 -->
+        <!-- div 태그의 id 속성값은 button 태그의 data-bs-target 속성에서 사용 -->
+
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Logo</a>
+
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarmenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarmenu">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>드랍다운 메뉴가 있는 네비게이션 바</h3>
+      <!-- 네비게이션바의 메뉴인 li 태그에 dropdown를 추가하여 네비게이션 바 메뉴에 드랍다운 메뉴를 사용함 -->
+      <!-- li 태그의 class에 .dropdown를 추가 -->
+      <!-- li 태그의 자식 태그인 a 태그의 class에 .dropdown-toggle을 추가하고 사용자 속성인 data-bs-toggle="dropdown"을 추가-->
+      <!-- a 태그의 형제 태그로 ul 태그를 추가하고 class에 .dropdown-menu를 추가하여 드랍다운 버튼 생성 -->
+      <!-- 드랍 다운 메뉴인 ul 태그의 자식 태그인 li 태그와 a 태그를 추가하고 a 태그의 class에 .dropdown-item을 추가하여 사용함 -->
+
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Logo</a>
+
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarmenu2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarmenu2">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">메뉴 3</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item">드랍다운 메뉴1</a></li>
+                  <li><a href="#" class="dropdown-item">드랍다운 메뉴2</a></li>
+                  <li><a href="#" class="dropdown-item">드랍다운 메뉴3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>네비게이션 바에 입력창 넣기</h3>
+      <!-- 네비게이션 바의 메뉴에 form 태그와 input 태그를 추가하여 사용자 입력이 가능한 네비게이션바를 사용할 수 있음 -->
+      <!-- ul 태그의 형제 태그로 form 태그와 input 태그를 추가함 -->
+      <!-- ul 태그의 class에 .me-auto 혹은 .ms-auto를 추가함(form 태그의 class에 .ms-auto, .ms-auto 사용)-->
+      <!-- form 태그의 class에 .d-flex를 추가함 -->
+      <!-- 원하는 input 태그를 form 태그의 자식 태그로 추가해서 사용 -->
+
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Logo</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarmenu3">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarmenu3">
+            <ul class="navbar-nav me-auto">
+              <li><a href="#" class="nav-link">MENU 1</a></li>
+              <li><a href="#" class="nav-link">MENU 2</a></li>
+              <li><a href="#" class="nav-link">MENU 3</a></li>
+            </ul>
+            <form class="d-flex">
+              <input type="text" class="form-control me-2" placeholder="search...">
+              <button type="submit" class="btn btn-outline-success">search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>네비게이션 바 상단/하단 고정, sticky 네비게이션 바</h3>
+      <!-- 네비게이션바의 class에 .fixed-top, .fixed-bottom을 사용하여 상단 or 하단 고정 -->
+      <!-- 네비게이션 바 사용 시, 아래로 스크롤 하면 네비게이션바가 상단에 고정되고, 위로 스크롤 시 네비게이션 바가 중간에 존재하는 형태 -->
+      <!-- 네비게이션바 상단 부분에 내용이 존재할 경우 네비게이션 바의 class에 .sticky-top을 추가하여 사용 -->
+
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Logo</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarmenu3">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarmenu3">
+            <ul class="navbar-nav me-auto">
+              <li><a href="#" class="nav-link">MENU 1</a></li>
+              <li><a href="#" class="nav-link">MENU 2</a></li>
+              <li><a href="#" class="nav-link">MENU 3</a></li>
+            </ul>
+            <form class="d-flex">
+              <input type="text" class="form-control me-2" placeholder="search...">
+              <button type="submit" class="btn btn-outline-success">search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+
+  </div>
+
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</html>

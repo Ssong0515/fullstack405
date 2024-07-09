@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩을 사용한 flex box</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+        .flex-container {
+            border: 1px solid #222;
+            background-color: #eee;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            display: flex;
+        }
+
+        .box {
+            padding: 5px 45px;
+            margin: 5px;
+        }
+
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .blue {background-color: blue;}
+
+        img {
+            /* size: 100% 100%; */
+            width: 120px;
+            height: 80px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Flex box: 부트스트랩에서는 CSS의 flex box를 쉽게 사용할 수 있도록 미리 class를 선언 해 놓음 -->
+
+    <div id="div01">
+        <h2>flex box 사용하기</h2>
+
+        <h3>CSS를 사용하여 flex box 사용하기</h3>
+        <div class="flex-container">
+            <div class="box red">1</div>
+            <div class="box green">2</div>
+            <div class="box blue">3</div>
+        </div>
+
+        <br><hr><br>
+        
+        <h3>부트스트랩을 사용하여 flex box 사용하기</h3> 
+        <!-- CSS에서 flex box를 사용 시 display: flex를 선언 후 사용 해야 하지만
+        부트스트랩에서는 미리 만들어져 있기에 d-flex로 간단하게 사용하면 됨 -->
+        <div class="d-flex border border-secondary bg-secondary bg-opacity-25 text-center text-white">            
+           <div class="px-5 py-1 m-1 bg-danger">1</div>
+           <div class="px-5 py-1 m-1 bg-success">2</div>
+           <div class="px-5 py-1 m-1 bg-primary">3</div>
+           
+        </div>
+
+        <br><hr><br>
+
+        <h3>d-flex와 d-inline-flex</h3>
+        <!-- 부트스트랩에서 flex box를 d-flex와 d-inline-flex 두가지를 제공 -->
+         
+        <h4>d-flex</h4>
+        <div class="d-flex justify-content-center p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+
+        <h4>d-inline-flex</h4>
+        <div class="d-inline-flex p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+
+        <br><hr><br>
+
+        <h3>direction 사용하기</h3>
+        <!-- 부트스트랩에서 flex box의 direction을 미리 class로 선언 해 놓음 -->
+        <!-- flex-row, flex-row-reverse, flex-column, flex-column-reverse -->
+        <!-- 부모 태그에 d-flex와 함께 사용 -->
+        <h4>flex-row</h4>
+        <div class="d-flex flex-row p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+
+        <h4>flex-row-reverse</h4>
+        <div class="d-flex flex-row-reverse p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        
+        <h4>flex-column</h4>
+        <div class="d-flex flex-column p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        
+        <h4>flex-column-reverse</h4>
+        <div class="d-flex flex-column-reverse p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        
+        <h3>flexbox 사용 시 가로 정렬</h3>
+        <!-- 부트스트랩에서 flex box 사용 시 자식 태그를 가로로 정렬하기 위한 class -->
+        <!-- 각 row 안에 contents를 정렬 -->
+        <!-- justify-content-start, justify-content-end, justify-content-center, justify-content-between, justify-content-around -->
+        <!-- d-flex와 함께 사용 -->
+
+        <h4>justify-content-start</h4>
+        <div class="d-flex justify-content-start p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>justify-content-end</h4>
+        <div class="d-flex justify-content-end p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>justify-content-center</h4>
+        <div class="d-flex justify-content-center p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>justify-content-between</h4>
+        <div class="d-flex justify-content-between p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>justify-content-around</h4>
+        <div class="d-flex justify-content-around p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>justify-content-evenly</h4>
+        <div class="d-flex justify-content-evenly p-3 bg-secondary text-white mb-3">
+            <div class="p-2 bg-info"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 bg-warning"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 bg-primary"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+
+        <br><hr><br>
+        <h3>flex box 사용 시, 세로 정렬하기(align-items)</h3>
+        <!-- 부트스트랩에서 flex box 사용 시, 각 row 안에 item들을 세로 기준으로 정렬 하기 위한 방법 중 align-items를 미리 정의함 -->
+        <!-- align-items-start, align-items-end, align-items-center, align-items-baseline, align-items-stretch -->
+        <!-- d-flex와 함께 사용 -->
+
+        <h4>align-items-start</h4>
+        <div class="d-flex align-items-start bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex itme1</div>
+            <div class="p-2 border">flex itme2</div>
+            <div class="p-2 border">flex itme3</div>
+        </div>
+        <h4>align-items-end</h4>
+        <div class="d-flex align-items-end bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex itme1</div>
+            <div class="p-2 border">flex itme2</div>
+            <div class="p-2 border">flex itme3</div>
+        </div>
+        <h4>align-items-center</h4>
+        <div class="d-flex align-items-center bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex itme1</div>
+            <div class="p-2 border">flex itme2</div>
+            <div class="p-2 border">flex itme3</div>
+        </div>
+        <h4>align-items-baseline</h4>
+        <div class="d-flex align-items-baseline bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border" style="font-size: 1.2em;">flex itme1</div>
+            <div class="p-2 border" style="font-size: 1.5em;">flex itme2</div>
+            <div class="p-2 border" style="font-size: 2.0em;">flex itme3</div>
+        </div>
+        <h4>align-items-stretch</h4>
+        <div class="d-flex align-items-stretch bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex itme1</div>
+            <div class="p-2 border">flex itme2</div>
+            <div class="p-2 border">flex itme3</div>
+        </div>
+
+        <br><hr><br>
+
+        <h3>flex box 사용 시, 세로 정렬하기(align-content2)</h3>
+        <!-- 부트스트랩에서 flex box 사용 시, rows를 정렬 하기 위한 방법 -->
+        <!-- align-content 는 자식 태그(각 row)가 2라인 이상 표시될 경우 화면에 세로로 어떻게 정렬 할 것인지를 설정 -->
+        <!-- align-content-start, align-content-center, align-content-end, align-content-around, align-content-stretch -->
+        <!-- d-flex, flex-wrap(flex-wrap-reverse)과 함께 사용 해야 함 -->
+
+        <h4>align-content-start</h4>
+        <div class="d-flex flex-wrap align-content-start bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex item1</div>
+            <div class="p-2 border">flex item2</div>
+            <div class="p-2 border">flex item3</div>
+            <div class="p-2 border">flex item4</div>
+            <div class="p-2 border">flex item5</div>
+            <div class="p-2 border">flex item6</div>
+            <div class="p-2 border">flex item7</div>
+            <div class="p-2 border">flex item8</div>
+            <div class="p-2 border">flex item9</div>
+            <div class="p-2 border">flex item10</div>
+            <div class="p-2 border">flex item11</div>
+            <div class="p-2 border">flex item12</div>
+            <div class="p-2 border">flex item13</div>
+            <div class="p-2 border">flex item14</div>
+            <div class="p-2 border">flex item15</div>
+            <div class="p-2 border">flex item16</div>
+            <div class="p-2 border">flex item17</div>
+            <div class="p-2 border">flex item18</div>
+            <div class="p-2 border">flex item19</div>
+            <div class="p-2 border">flex item20</div>
+        </div>
+        <h4>align-content-end</h4>
+        <div class="d-flex flex-wrap align-content-end bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex item1</div>
+            <div class="p-2 border">flex item2</div>
+            <div class="p-2 border">flex item3</div>
+            <div class="p-2 border">flex item4</div>
+            <div class="p-2 border">flex item5</div>
+            <div class="p-2 border">flex item6</div>
+            <div class="p-2 border">flex item7</div>
+            <div class="p-2 border">flex item8</div>
+            <div class="p-2 border">flex item9</div>
+            <div class="p-2 border">flex item10</div>
+            <div class="p-2 border">flex item11</div>
+            <div class="p-2 border">flex item12</div>
+            <div class="p-2 border">flex item13</div>
+            <div class="p-2 border">flex item14</div>
+            <div class="p-2 border">flex item15</div>
+            <div class="p-2 border">flex item16</div>
+            <div class="p-2 border">flex item17</div>
+            <div class="p-2 border">flex item18</div>
+            <div class="p-2 border">flex item19</div>
+            <div class="p-2 border">flex item20</div>
+        </div>
+        <h4>align-content-center</h4>
+        <div class="d-flex flex-wrap align-content-center bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex item1</div>
+            <div class="p-2 border">flex item2</div>
+            <div class="p-2 border">flex item3</div>
+            <div class="p-2 border">flex item4</div>
+            <div class="p-2 border">flex item5</div>
+            <div class="p-2 border">flex item6</div>
+            <div class="p-2 border">flex item7</div>
+            <div class="p-2 border">flex item8</div>
+            <div class="p-2 border">flex item9</div>
+            <div class="p-2 border">flex item10</div>
+            <div class="p-2 border">flex item11</div>
+            <div class="p-2 border">flex item12</div>
+            <div class="p-2 border">flex item13</div>
+            <div class="p-2 border">flex item14</div>
+            <div class="p-2 border">flex item15</div>
+            <div class="p-2 border">flex item16</div>
+            <div class="p-2 border">flex item17</div>
+            <div class="p-2 border">flex item18</div>
+            <div class="p-2 border">flex item19</div>
+            <div class="p-2 border">flex item20</div>
+        </div>
+        <h4>align-content-around</h4>
+        <div class="d-flex flex-wrap align-content-around bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex item1</div>
+            <div class="p-2 border">flex item2</div>
+            <div class="p-2 border">flex item3</div>
+            <div class="p-2 border">flex item4</div>
+            <div class="p-2 border">flex item5</div>
+            <div class="p-2 border">flex item6</div>
+            <div class="p-2 border">flex item7</div>
+            <div class="p-2 border">flex item8</div>
+            <div class="p-2 border">flex item9</div>
+            <div class="p-2 border">flex item10</div>
+            <div class="p-2 border">flex item11</div>
+            <div class="p-2 border">flex item12</div>
+            <div class="p-2 border">flex item13</div>
+            <div class="p-2 border">flex item14</div>
+            <div class="p-2 border">flex item15</div>
+            <div class="p-2 border">flex item16</div>
+            <div class="p-2 border">flex item17</div>
+            <div class="p-2 border">flex item18</div>
+            <div class="p-2 border">flex item19</div>
+            <div class="p-2 border">flex item20</div>
+        </div>
+        <h4>align-content-stretch</h4>
+        <div class="d-flex flex-wrap align-content-stretch bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex item1</div>
+            <div class="p-2 border">flex item2</div>
+            <div class="p-2 border">flex item3</div>
+            <div class="p-2 border">flex item4</div>
+            <div class="p-2 border">flex item5</div>
+            <div class="p-2 border">flex item6</div>
+            <div class="p-2 border">flex item7</div>
+            <div class="p-2 border">flex item8</div>
+            <div class="p-2 border">flex item9</div>
+            <div class="p-2 border">flex item10</div>
+            <div class="p-2 border">flex item11</div>
+            <div class="p-2 border">flex item12</div>
+            <div class="p-2 border">flex item13</div>
+            <div class="p-2 border">flex item14</div>
+            <div class="p-2 border">flex item15</div>
+            <div class="p-2 border">flex item16</div>
+            <div class="p-2 border">flex item17</div>
+            <div class="p-2 border">flex item18</div>
+            <div class="p-2 border">flex item19</div>
+            <div class="p-2 border">flex item20</div>
+        </div>
+        <h4>align-content-between</h4>
+        <div class="d-flex flex-wrap align-content-between bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border">flex item1</div>
+            <div class="p-2 border">flex item2</div>
+            <div class="p-2 border">flex item3</div>
+            <div class="p-2 border">flex item4</div>
+            <div class="p-2 border">flex item5</div>
+            <div class="p-2 border">flex item6</div>
+            <div class="p-2 border">flex item7</div>
+            <div class="p-2 border">flex item8</div>
+            <div class="p-2 border">flex item9</div>
+            <div class="p-2 border">flex item10</div>
+            <div class="p-2 border">flex item11</div>
+            <div class="p-2 border">flex item12</div>
+            <div class="p-2 border">flex item13</div>
+            <div class="p-2 border">flex item14</div>
+            <div class="p-2 border">flex item15</div>
+            <div class="p-2 border">flex item16</div>
+            <div class="p-2 border">flex item17</div>
+            <div class="p-2 border">flex item18</div>
+            <div class="p-2 border">flex item19</div>
+            <div class="p-2 border">flex item20</div>
+        </div>
+
+        <br><hr><br>
+
+        <h3>flex box에서 세로 정렬하기3</h3>
+        <!-- 부트스트랩에서 flex box 사용 시, 자식 태그를 세로로 정렬하는 방법 중 align-self를 미리 정의함 -->
+        <!-- align-self-start, align-self-end, align-self-end, align-self-baseline, align-self-stretch(기본값) -->
+        <!-- d-flex의 자식 태그에 사용 해야 함 -->
+
+        <h4>align-self-start</h4>
+        <div class="d-flex align-items-center bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 border align-self-start"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>align-self-end</h4>
+        <div class="d-flex align-items-center bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 border align-self-end"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>align-self-center</h4>
+        <div class="d-flex align-items-start bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 border align-self-center"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>align-self-baseline</h4>
+        <div class="d-flex align-items-stretch bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 border align-self-baseline" style="font-size: 3em;"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+        <h4>align-self-stretch</h4>
+        <div class="d-flex align-items-center bg-secondary text-white mb-3" style="height: 300px;">
+            <div class="p-2 border"><img src="../../이미지/윈터1.jpg" alt=""></div>
+            <div class="p-2 border align-self-stretch" style="font-size: 3em;"><img src="../../이미지/카리나1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/닝닝1.jpg" alt=""></div>
+        </div>
+
+
+        <br><hr><br>
+
+        <h3>부모의 최대 너비보다 자식 태그들의 합 너비가 클 경우, flex-wrap</h3>
+        <!-- 부트스트랩에서 flex box 사용 시, 부모 태그의 최대 너비 보다 자식 태그들의 총 너비 합이 클 경우 
+            자동 줄바꿈을 위한 flex-wrap 속성 -->
+        <!-- flex-nowrap(기본값), flex-wrap, flex-wrap-reverse -->
+        <!-- d-flex와 함께 사용 -->
+
+        <h4>flex-nowrap</h4>
+        <div class="d-flex flex-nowrap bg-secondary text-white mb-3">
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+        </div>
+        <h4>flex-wrap</h4>
+        <div class="d-flex flex-wrap bg-secondary text-white mb-3">
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+        </div>
+        <h4>flex-wrap-reverse</h4>
+        <div class="d-flex flex-wrap-reverse bg-secondary text-white mb-3">
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+            <div class="p-2 border"><img src="../../이미지/장원영1.jpg" alt=""></div>
+        </div>
+
+        <h3>플렉스 박스 사용 시, 부모 태그의 크기 만큼 자식 태그의 너비를 채우기</h3>
+        <!-- 부트스트랩에서 flex box 사용 시, 자식 태그의 너비를 부모 태그의 크기만큼 채울 수 있도록 미리 정의함 -->
+        <!-- flex-fill: d-flex의 자식 태그에 각각 사용 시, 동일한 너비로 부모 태그의 전체 너비만큼 채움 -->
+        <!-- flex-grow-1: d-flex의 자식 태그 중 하나에 사용하여 부모 태그의 나머지 너비를 모두 채움-->
+        <!-- d-flex의 자식 태그에 사용함 -->
+
+        <h4>채우기 사용 안함</h4>
+        <div class="d-flex bg-secondary text-white mb-3">
+            <img class="p-2 border" src="../../이미지/카리나6.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나5.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나4.jpg" alt="">
+        </div>
+        <h4>flex-fill</h4>
+        <div class="d-flex bg-secondary text-white mb-3">
+            <img class="p-2 border flex-fit" src="../../이미지/카리나6.jpg" alt="">
+            <img class="p-2 border flex-fit" src="../../이미지/카리나5.jpg" alt="">
+            <img class="p-2 border flex-fit" src="../../이미지/카리나4.jpg" alt="">
+        </div>
+        <h4>flex-grow-1</h4>
+        <div class="d-flex bg-secondary text-white mb-3">
+            <img class="p-2 border" src="../../이미지/카리나6.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나5.jpg" alt="">
+            <img class="p-2 border flex-grow-1" src="../../이미지/카리나4.jpg" alt="">
+        </div>
+
+        <br><hr><br>
+
+        <h3>플렉스 박스 사용 시, 자식 태그의 순서 지정하기</h3>
+        <!-- 부트스트랩에서 flex box 사용 시, 자식 태그의 정렬 순서를 사용자 지정 할 수 있도록 함 -->
+        <!-- order-{0 ~ 5} -->
+        <!-- d-flex의 자식 태그에 사용함 -->
+
+        <h4>순서 사용 안함</h4>
+        <div class="d-flex bg-secondary text-white mb-3">
+            <img class="p-2 border" src="../../이미지/카리나6.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나5.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나4.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나3.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나2.jpeg" alt="">
+        </div>
+
+        <h4>순서 사용</h4>
+        <div class="d-flex bg-secondary text-white mb-3">
+            <img class="p-2 border" src="../../이미지/카리나6.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나5.jpg" alt="">
+            <img class="p-2 border order-4" src="../../이미지/카리나4.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나3.jpg" alt="">
+            <img class="p-2 border" src="../../이미지/카리나2.jpeg" alt="">
+        </div>
+
+    </div>
+</body>
+</html>

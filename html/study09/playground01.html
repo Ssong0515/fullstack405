@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h3>기본 alert</h3>
+    <div class="alert alert-danger">기본 alert</div>
+    <br><hr><br>
+    
+    <div>
+      <h3>alert 내용 안에 링크 사용하기, alert-link</h3>
+      <div class="alert alert-primary">기본 alert <a href="#" class="alert-link">alert link</a></div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>기본 alert에 닫기 버튼 추가 및 닫을 때 애니메이션 추가</h3>
+      <div class="alert alert-primary alert-dismissible fade show">
+        기본 alert
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+    </div>
+
+    <div>
+      <h3>badges</h3>
+      <p>게시글 <span class="badge bg-primary">댓글1</span></p>
+      <p>게시글2 <span class="badge bg-warning">댓글1</span></p>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>알약 모양 badge 사용, 버튼 안의 badge</h3>
+      <h3>알약 모양 badge <span class="badge bg-primary rounded-pill">알약</span></h3>
+      <button class="btn btn-primary" type="button">기본 부트스트랩 버튼</button>
+      <button class="btn btn-primary" type="button">
+        메세지 확인
+        <span class="badge bg-warning">7</span>
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>

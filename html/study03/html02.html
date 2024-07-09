@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 선택자</title>
+
+    <style>
+        
+        /* 전체 선택자 */
+        * {
+            margin: 0;
+            /* color: green; */
+        }
+        
+        /* 태그(타입) 선택자 */
+        p {
+            font-style: italic;
+            color: brown;
+        }
+        
+        h3 {
+            color: greenyellow;
+        }
+        
+        /* id 선택자 */
+        /* id: 주민번호, class: 직업 */
+        /* id 선택자: id는 해당 html 문서 내에서 단 1개만 존재
+            같은 id 존재 시, 랜덤으로 적용 되기 때문에 반드시 id는 1개만 */
+
+        #container {
+            width: 500px;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid black;
+            color: blue;   
+        }
+        
+        /* class 선택자 */
+        /* class는 동일한 값 가질수 있음 */
+        /* 하나의 태그가 여러개의 class 가질 수 있음, 여러개의 태그가 하나의 class 공유 가능 */
+
+        .accent {
+            border: 1px dashed black;
+            padding: 5px;
+            color: red;
+        }
+        .bg {
+            background-color: gray;
+        }
+
+        /* 그룹 선택자 */
+        p, h3 {text-align: center;}
+
+        /* 자식 선택자: 사용 기호 '>', 지정한 html 태그의 직계 자식 태그를 선택함 */
+        /* 사용 방법: 기준 선택자 " > " 지정할 선택자 */
+
+        #container2 > p {
+            color: darkviolet;
+            font-size: 20px;
+        }
+
+        #container2 > .bg {
+            background-color: orangered;
+        }
+
+        /* 자손 선택자: 사용 기호 ' ', 지정한 html 태그의 자손 중에서 태그를 선택함 */
+        /* 사용 방법: 기준 선택자 " " 지정할 선택자*/
+
+        #container2 p {
+            color: deepskyblue;
+            font-weight: bold;
+        }
+
+        #container2 .bg {
+            background-color: aqua;
+        }
+
+        /* p.bg 와 p .bg는 다름 */
+        /* p.bg는 p에 .bg 클래스 인것 */
+        /* p .bg는 p의 자손 중에서 .bg 들어 간 것들 */
+
+        p.bg {
+            border: 1px dashed red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <img src="cat1.jpg" alt="고양이1">
+
+    <div id="container">
+        <h3 class="accent bg">태그 선택자</h3>
+        <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+        <p>레드향은 한라봉과 귤을 교배한 것으로</p>
+        <p>비타민 C와 비타민 P가 풍부해...</p>
+    </div>
+
+    <br><br>
+
+    <div id="container2">
+        <h3>태그 선택자</h3>
+        <p>껍질에 붉은 빛이 돌아 레드향이라 불린다.</p>
+        <p class="bg">레드향은 한라봉과 귤을 교배한 것으로</p>
+        <p>비타민 C와 비타민 P가 풍부해...</p>
+
+        <div>
+            <h4>조리법</h4>
+            <p>어떻게 먹어도 맛있어요</p>
+            <p>사실 없어서 못 먹음</p>
+            <ul>
+                <li>한라봉 보다 레드향</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+
+<!-- id: 주민번호, class: 직업 -->
+<!-- id 선택자: id는 해당 html 문서 내에서 단 1개만 존재 -->
+<!-- 같은 id 존재 시, 랜덤으로 적용 되기 때문에 반드시 id는 1개만 -->
+
+<!-- class는 동일한 값 가질수 있음 -->
+<!-- 하나의 태그가 여러개의 class 가질 수 있음 -->
+<!-- 여러개의 태그가 하나의 class 공유 가능 -->
+
+<!-- 캐스캐이딩 원칙 -->
+<!-- 스타일 우선 순위 -->
+<!-- 1. 위에서 아래로 -->
+<!-- 2. 브라우저 스타일 -> 제작자 스타일 -> 사용자 스타일 -->
+<!-- 3. !important(변경이 안되게 하는 것) -> 인라인 스타일 -> id 스타일 -> 클래스 스타일 -> 타입 스타일 -->
+<!-- 부모 -> 자식 상속 (text 관련만 상속 됨) -->

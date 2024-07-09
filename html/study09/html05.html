@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩10</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>nav menu</h2>
+
+    <div>
+      <h3>기본 nav</h3>
+      <!-- 화면 상단 혹은 사이드 바에서 사용 할 수 있는 네비게이션 메뉴를 부트스트랩에서 디자인 하여 제공함 -->
+      <!-- ul태그의 class에 .nav를 사용 -->
+      <!-- li태그의 class에 .nav-item을 사용 -->
+      <!-- li 태그의 자식 태그인 a 태그의 class에 .nav-link를 사용 -->
+      <!-- nav 메뉴의 활성화/비활성화를 위해서 .active, .disabled 사용 가능-->
+
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+      <h3>nav 메뉴 정렬하기, 세로 방식 nav 메뉴</h3>
+      <!-- nav 메뉴는 플렉스 박스로 구현되어 있기 때문에 가로 정렬을 justify-content-{정렬방식}을 사용함 -->
+      <!-- nav 메뉴는 플렉스 박스로 구현되어 있기 때문에 .flex-column을 추가하여 세로 형태로 변경 가능 -->
+
+
+      <ul class="nav justify-content-start">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+
+
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+
+
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+
+      <br>
+      <h4>꼭 li 태그에 nav-item을 붙힌 형태 필요 없음. 부모태그에.nav 자식태그(a)에 .nav-link들 만으로도 가능</h4>
+      <ul class="nav">
+        <a href="#" class="nav-link">링크1</a>
+        <a href="#" class="nav-link">링크2</a>
+        <a href="#" class="nav-link">링크3</a>
+      </ul>
+
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+      <h3>nav 메뉴 Tabs/Pills</h3>
+      <!-- nav 메뉴에 .nav-tabs, .nav-pills를 추가하여 메뉴 모양 변경 가능 -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+      <br>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+
+      <br><br>
+      <h3>nav 메뉴 tabs/pills를 전체 크기(justify-content)로 사용하기</h3>
+      <!-- nav 메뉴에 .nav-justified를 추가하면 부모 태그의 전체 너비를 사용하는 nav 메뉴로 표시됨 -->
+
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+      <br>
+      <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">링크2 활성화</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">링크3</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">링크4 비활성화</a>
+        </li>
+      </ul>
+    
+      <br><br>
+    
+      <div>
+        <h3>nav 메뉴에 드롭 다운 버튼 사용하기</h3>
+        <!-- nav 메뉴로 사용하는 ul 태그 사용 -->
+        <!-- li 태그에 .dropdown 추가 -->
+        <!-- li 태그의 자식 태그인 a 태그에 .dropdown-toggle 클래스 및 data-bs-toggle="dropdown" 사용자 속성을 추가 -->
+        <!-- li 태그의 자식 태그로 다시 ul 태그 및 .dropdown-menu 클래스 추가 -->
+        <!-- 드랍다운 메뉴의 자식 태그로 li와 a태그 추가 및 .dropdown-item 추가 -->
+
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a href="#" class="nav-link active">링크1 활성화</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">링크3 드롭다운 메뉴</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item">서브 메뉴1</a></li>
+              <li><a href="#" class="dropdown-item">서브 메뉴2</a></li>
+              <li><a href="#" class="dropdown-item">서브 메뉴3</a></li>
+              <li><a href="#" class="dropdown-item">서브 메뉴4</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link disabled">링크4 비활성화</a></li>
+        </ul>
+      </div>
+    
+      <br><hr><br>
+
+      <div>
+        <h3>nav 메뉴 사용 시, 컨텐츠를 동적으로 변경하기</h3>
+        <!-- nav 메뉴를 설정하고, 아래쪽에 div 태그로 컨텐츠를 출력할 공간을 마련함 -->
+        <!-- 컨텐츠가 있는 부분의 div 태그의 class에 .tab-content를 사용함 -->
+        <!-- 자식 태그로 div 태그를 추가 하고 class에 .tab-pane과 id 값을 설정 -->
+        <!-- 현재 활성화 되어 있는 컨텐츠 화면으로 설정할 div의 class에 .active를 추가하고 다른 div에는 class에 .fade를 추가함 -->
+        <!-- nav 메뉴의 a 태그에 사용자 속성은 data-bs-toggle="tab"을 추가하고, href 속성에 이동하고자 하는 컨텐츠 영역의 id 값을 입력함 -->
+        <!-- 현재 활성화 되어 있는 nav 메뉴에는 .active class를 추가함 -->
+        <!-- .nav-tabs 또는 .nav-pills 둘 다 사용 가능 -->
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item"><a href="#section1" class="nav-link active" data-bs-toggle="tab">Section1</a></li>
+          <li class="nav-item"><a href="#section2" class="nav-link" data-bs-toggle="tab">Section2</a></li>
+          <li class="nav-item"><a href="#section3" class="nav-link" data-bs-toggle="tab">Section3</a></li>
+        </ul>
+
+        <br><br>
+
+        <div class="tab-content">
+          <div id="section1" class="container tab-pane active m-4 p-4 bg-primary" style="height: 300px;">
+            <h3>Section1</h3>
+            <p>nav 메뉴에서 첫번째 탭을 선택 시, 화면에 출력 되는 영역</p>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div id="section2" class="container tab-pane fade m-4 p-4 bg-success" style="height: 300px;">
+            <h3>Section2</h3>
+            <p>nav 메뉴에서 두번째 탭을 선택 시, 화면에 출력 되는 영역</p>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div id="section3" class="container tab-pane fade m-4 p-4 bg-info" style="height: 300px;">
+            <h3>Section3</h3>
+            <p>nav 메뉴에서 세번째 탭을 선택 시, 화면에 출력 되는 영역</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+</body>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</html>

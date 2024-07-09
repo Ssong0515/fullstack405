@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+  <h1>W3.CSS Login Modal</h1>
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exModal">dd</button>
+
+
+  <div class="modal" id="exModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="d-flex">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+          </div>          
+          <div class="d-flex">
+            <img src="../../움직이는/김유정1.gif" alt="" class="rounded-circle mx-auto" style="width: 150px; height: 150px;">            
+          </div>
+          <form>
+            <div>
+              <label for="username" class="form-label fw-bold">Username</label>
+              <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div>
+              <label for="password" class="form-label fw-bold">Passward</label>
+              <input type="password" id="passward" name="passward" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary d-block w-100">submit</button>
+          </form>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check" name="check" checked>
+            <label for="check">Remember me</label>
+          </div>
+        </div>
+
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" data-bs-dismiss="modal">Cancel</button>
+          <span>Forgot <a href="#">password?</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

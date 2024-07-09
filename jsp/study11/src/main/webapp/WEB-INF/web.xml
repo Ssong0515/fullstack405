@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>bitc.fullstack405.study11.servlet.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet.do</url-pattern>
+    </servlet-mapping>
+
+<!--    데이터베이스 접속 정보 -->
+    <context-param>
+        <param-name>MySqlDriver</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUrl</param-name>
+        <param-value>jdbc:mysql://localhost:3306/testdb1?characterEncoding=UTF-8&amp;serverTimezone=UTC</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlUser</param-name>
+        <param-value>test1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>MySqlPass</param-name>
+        <param-value>full405</param-value>
+    </context-param>
+
+<!--    admin 계정 ID -->
+    <context-param>
+        <param-name>admin_id</param-name>
+        <param-value>test1</param-value>
+    </context-param>
+</web-app>

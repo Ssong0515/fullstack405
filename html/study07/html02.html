@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스 사용하기</title>
+
+    <style>
+        .flex-container {
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            display: flex;
+        }
+
+        .box {
+            padding: 5px 45px;
+            margin: 5px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+
+        #div01 > .opt1 {justify-content: flex-start;}
+        #div01 > .opt2 {justify-content: flex-end;}
+        #div01 > .opt3 {justify-content: center;}
+        #div01 > .opt4 {justify-content: space-between;}
+        #div01 > .opt5 {justify-content: space-around;}
+
+        #div02 > .flex-container {height: 200px;}
+
+        #div02 > .opt1 {align-items: flex-start;}
+        #div02 > .opt2 {align-items: flex-end;}
+        #div02 > .opt3 {align-items: center;}
+        #div02 > .opt4 {align-items: baseline;}
+        #div02 > .opt5 {align-items: stretch;}
+
+
+        #div03 > .flex-container {height: 200px;}
+        #div03 > .opt1 {align-items: flex-start;}
+
+        #div04 > .flex-container {
+            height: 200px;
+            flex-flow: row wrap;
+        }
+
+
+        #div04 > .opt1 {
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+        #div04 > .opt2 {
+            align-items: flex-start;
+            align-content: flex-end;    
+        }
+        #div04 > .opt3 {
+            align-items: center;
+            align-content: center;
+        }
+        #div04 > .opt4 {
+            align-items: flex-start;
+            align-content: space-between;
+        }
+        #div04 > .opt5 {
+            align-items: start;
+            align-content: space-around;
+        }
+        #div04 > .opt6 {
+            /* align-items: start; */
+            align-content: stretch;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <h2>플렉스박스 사용하기2</h2>
+
+        <div id="div01">
+            <h3>자식 태그 정렬하기, justify-conent</h3>
+
+            <h4>flex-start</h4>
+            <div class="flex-container opt1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <h4>flex-end</h4>
+            <div class="flex-container opt2">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+            <h4>center</h4>
+            <div class="flex-container opt3">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+            <h4>space-between</h4>
+            <div class="flex-container opt4">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+            <h4>space-around</h4>
+            <div class="flex-container opt5">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+        </div>
+
+
+        <br><hr><br>
+
+        <div id="div02">
+            <h3>자식 태그 정렬하기, align-items</h3>
+
+            <h4>flex-start</h4>
+            <div class="flex-container opt1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <h4>flex-end</h4>
+            <div class="flex-container opt2">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+            <h4>center</h4>
+            <div class="flex-container opt3">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+            <h4>baseline</h4>
+            <div class="flex-container opt4">
+                <div class="box" style="font-size: 24px;">1</div>
+                <div class="box" style="font-size: 32px;">2</div>
+                <div class="box" style="font-size: 16px;">3</div>
+                <div class="box" style="font-size: 10px;">4</div>
+                <div class="box" style="font-size: 48px;">5</div>
+            </div>
+            
+            <h4>stretch</h4>
+            <div class="flex-container opt5">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+            
+        </div>
+
+        <br><hr><br>
+
+        <div id="div03">
+            <h3>자식 태그 정렬하기, align-self</h3>
+
+            <h4>전체적으로 align-items: flex-start 사용, 일부만 align-self: center, align-self: flex-end</h4>
+            <div class="flex-container opt1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box" style="align-self: center;">3</div>
+                <div class="box">4</div>
+                <div class="box" style="align-self: flex-end;">5</div>
+            </div>
+        </div>
+
+
+        <br><hr><br>
+
+        <div id="div04">
+            <h3>자식 태그의 항목이 여러줄일 때 세로 정렬 배치 방법, align-content</h3>
+
+            <h4>flex-start</h4>
+            <div class="flex-container opt1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+
+            <h4>flex-end</h4>
+            <div class="flex-container opt2">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+
+            <h4>center</h4>
+            <div class="flex-container opt3">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+
+
+            <h4>space-between</h4>
+            <div class="flex-container opt4">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+
+
+            <h4>space-around</h4>
+            <div class="flex-container opt5">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+
+
+            <h4>stretch</h4>
+            <div class="flex-container opt6">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+
+        </div>
+
+            
+
+
+    </div>
+</body>
+</html>

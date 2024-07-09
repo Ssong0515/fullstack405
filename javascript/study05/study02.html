@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn02").on("click", function () {
+                // show() : css의 display 속성을 원래 태그가 가지고 있던 값으로 되돌림
+                $("#img01").show();
+            })
+            $("#btn01").on("click", function () {
+                // hide() : css의 display: none 설정으로 변경
+                $("#img01").hide();
+            })
+            $("#btn03").on("click", function () {
+                // toggle() : 번갈아
+                // $("#img01").toggle();
+                $("#img01").toggle(5000, function () {
+                    $("#img01").toggle(5000, function (){
+
+                    });
+                });
+            })
+            //     다른 사용법:
+            //     $(css선택자).hide|show|toggle(속도, 콜백함수)
+            //     속도: slow, fast, 1/1000 초로 직접 입력 가능
+            //     콜백함수: hide/show/toggle 함수가 실행 완료 된 후 추가로 동작할 부분 입력
+        })
+    </script>
+</head>
+<body>
+<div class="container mt-5">
+    <h3>jquery 효과, hide/show</h3>
+    <div>
+        <button type="button" class="btn btn-secondary" id="btn01">숨기기</button>
+        <button type="button" class="btn btn-primary" id="btn02">보이기</button>
+        <button type="button" class="btn btn-primary" id="btn03">토글</button>
+    </div>
+    <img src="./카리나3.gif" alt="카리나" id="img01">
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            /* margin: 8px; */
+        }
+
+        .red {
+            background-color: red;            
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+
+        .position-relative { position: relative;}
+        .position-absolute { position: absolute;}
+        .position-fixed {position: fixed;}
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>position 사용하기</h2>
+
+        <div>
+            <h3>position: static</h3>
+
+            <div class="box red"></div>
+            <div class="box green"></div>
+            <div class="box blue"></div>
+        </div>
+
+        <br><br>
+
+        <div>
+            <h3>position: relative</h3>
+            <!-- 기본적으로 static과 같음 -->
+            <!-- 기본적으로 좌표가 0,0 으로 시작하지만 취지 지정 속성을 사용하면 위치 속성이 변경 됨 -->
+            <!-- 다른점: 위치 지정 속성(left, right, top, botoom)을 추가로 사용 할 수 있음 -->
+            <!-- left, top이 기본 -->
+            <!-- 음수 입력시 반대 방향으로 이동 -->
+            
+            <div class="box red position-relative" style="left: 50px; top: 50px;"></div>
+            <div class="box green position-relative" style="left: 100px; top: 100px;"></div>
+            <div class="box blue position-relative" style="left: 150px; top: 150px;"></div>
+
+            <br><br>
+
+            <div class="box red position-relative" style="left: -50px; top: -50px;"></div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><hr><br>
+
+        <div>
+            <h3>position: absolute</h3>
+            <!-- 원하는 위치에서 html 태그를 그릴 수 있음 -->
+            <!-- 위치 지정 속성(top, right, bottom, left)를 사용 할 수 있음, 기본: left, top -->
+            <!-- absolute 사용 시 html이 그려지는 기본 위치는 부모 태그의 시작 지점 -->
+            <!-- html 태그에 position: absolute 사용 시 반드시 부모 태그의 position을 relative로 설정 해야 함 -->
+            <div class="box position-relative" style="width: 500px; height: 500px;">
+                <div class="box red position-absolute" style="left: 50px; top: 50px;"></div>
+                <div class="box green position-absolute" style="right: 50px; bottom: 50px;"></div>
+                <div class="box blue position-absolute" style="left: 50px; bottom: -50px;"></div>
+            </div>
+        </div>
+
+        <div>
+            <h3>position: fixed</h3>
+            <!-- 원하는 위치에 html 태그를 그릴 수 있음 -->
+            <!-- 위치 지정 속성(top, right, bottom, left)를 사용하여 html의 위치를 지정, 기본(left, top) -->
+            <!-- html 태그를 그리는 위치가 웹 브라우저의 시작 위치를 기준으로 함 -->
+            <!-- 스크롤 사용하여 이동 해도 항상 같은 위치에 존재 -->
+
+            <div class="box red position-fixed" style="left: 100px; top: 100px;"></div>
+            <div class="box green position-fixed" style="right: 100px; bottom: 100px;"></div>
+        </div>
+
+    </div>
+</body>
+</html>

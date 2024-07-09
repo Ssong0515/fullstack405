@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 17</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+  
+  <div class="container">
+    <h2>캐러셀</h2>
+
+    <div>
+      <h3>기본 캐러셀</h3>
+      <!-- 이미지를 좌우로 슬라이드 하는 기능을 부트스트랩에서 미리 제공함 -->
+        <!-- 부모 태그로 div 사용하고 id 속성에 값을 설정 -->
+        <!-- 부모 태그인 div 클래스에 .carousel, .slide를 추가하고, 사용자 속성인 data-bs-ride="carousel"을 추가 -->
+        <!-- 부모 태그인 div의 자식 태그로 3개 영역이 존재함 -->
+          <!-- 첫번째는 인디케이터 영역으로 div를 사용하고 class에 .carousel-indicators를 추가 -->
+          <!-- 인디케이터 div의 자식 태그로 button 태그 추가, 사용자 속성 data-bs-target을 추가 후 최상위 부모 태그인 div의 id 속성값 지정 -->
+          <!-- 인디케이터 div의 자식 태그인 button 태그에 추가로 사용자 속성 data-bs-slide-to 를 추가한 후 슬라이드 번호를 입력함 -->
+          <!-- 인디케이터 버튼의 개수는 아래의 슬라이드쇼 이미지 개수와 동일해야 함 -->
+
+          <!-- 두번째는 슬라이드 쇼 영역으로 div를 사용하고 class에 .carousel-inner 을 추가함 -->
+          <!-- .carousel-inner를 사용한 div의 자식 태그로 div태그를 추가하고 class에 .carousel-item을 추가 -->
+          <!-- .carousel-item을 사용한 div의 자식 태그로 img를 추가 -->
+          <!-- .carousel-inner를 사용한 div는 인디케이터의 버튼 개수와 동일 -->
+
+          <!-- 세번째는 컨트롤 버튼 영역으로 button 태그를 사용하고 class에 .carousel-control-prev, carousel-control-next를 사용 -->
+          <!-- 컨트롤 버튼에 사용자 속성 data-bs-target을 추가하고 최상위 부모인 div의 id 속성값을 설정 -->
+          <!-- 컨트롤 버튼에 사용자 속성 data-bs-slide="prev", data-bs-slide="next"를 각각 추가하여 오른쪽 왼쪽 슬라이드 버튼의 기능 추가 -->
+          <!-- 컨트롤 버튼의 자식 태그로 span 태그를 추가하고 class에 .carousel-control-prev-icon을 추가하여 사용 -->
+
+          <!-- 슬라이드 쇼 이미지 위에 텍스트 입력 -->
+          <!-- .carousel-item을 사용한 div의 자식 태그로 div를 추가하고 class에 .carsoul-caption을 추가 -->
+          <!-- .carousel-caption을 사용한 div의 자식 태그로 텍스트 입력을 위한 h1~h6 및 p 태그를 추가하여 사용 -->
+          <!-- 최상위 부모 태그인 div 태그의 class에 .carousel-dark를 추가하여 슬라이드 쇼 이미지 위의 텍스트 색상을 변경 할 수 있음 -->
+
+          <!-- .carousel-item을 사용한 div 태그에 사용자 속성 data-bs-interval="시간"을 입력하여 슬라이드 시간 지정 가능 -->
+
+          <!-- 최상위 부모 태그인 div 태그의 class에 .carousel-fade를 추가하여 슬라이드 대신 페이드 효과 적용 가능 -->
+
+      <div class="carousel slide" id="#myCarousel" data-bs-ride="carousel">
+        <!-- 인디케이터 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="myCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="myCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="myCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- 슬라이드 쇼 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="../../움직이는/김유정1.gif" alt="" class="d-block w-100">
+            <div class="carousel-caption">
+              <h3 class="text-danger fw-bold d4">'hi~' 인사하는 김유정</h3>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="../../움직이는/카리나1.gif" alt="" class="d-block w-100">
+            <div class="carousel-caption">
+              <h3 class="text-danger">CF 광고 모델 카리나</h3>
+            </div>
+
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="../../움직이는/장원영1.gif" alt="" class="d-block w-100">
+            <div class="carousel-caption">
+              <h3 class="text-danger">딸기 두손으로 귀엽게 먹는 장원영</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 컨트롤 버튼 -->
+        <button type="button" class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button type="button" class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</body>
+</html>

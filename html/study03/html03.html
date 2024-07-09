@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=Gugi&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        body {}
+
+        h1 {
+            font-family: 바탕;
+            font-size: 3em;
+        }
+
+        .account {
+            font-size: 150%;
+            font-weight: 800;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .hi-melody-regular {
+            font-family: "Hi Melody", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .gugi-regular {
+            font-family: "Gugi", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .shadow1 {
+            color: red;
+            text-shadow: 1px 1px 0px black;
+        }
+
+        .shadow2 {
+            text-shadow: 5px 5px 3px orange;
+        }
+
+        .shadow3 {
+            font-size: 100px;
+            color: white;
+            text-shadow: 7px -7px 20px black, 0px 0px 5px red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <span class="accent" </span></p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로</p>
+    <p class="italic">일반 귤보다 2~3배 크고, 과육이 붉고 통통하다 </p>
+
+    <div>
+        <h2>html의 단위 살펴보기</h2>
+        <h3>px로 크기를 지정했을 경우</h3>
+        <div>
+            <p style="font-size: 8px;">8px로 지정</p>
+            <p style="font-size: 16px;">16px로 지정</p>
+            <p>크기 조정 안함</p>
+            <p style="font-size: 24px;">24px로 지정</p>
+            <p style="font-size: 32px;">32px로 지정</p>
+        </div>
+
+        <h3>%으로 크기를 지정했을 경우</h3>
+        <div>
+            <p style="font-size: 50%;">50% 지정</p>
+            <p style="font-size: 100%;">100% 지정</p>
+            <p>크기 조정 안함</p>
+            <p style="font-size: 150%;">150% 지정</p>
+            <p style="font-size: 200%;">200% 지정</p>
+        </div>
+
+        <h3>em으로 크기를 지정했을 경우</h3>
+        <div>
+            <p style="font-size: 0.5em;">0.5em 지정</p>
+            <p style="font-size: 1em;">1em 지정</p>
+            <p>크기 조정 안함</p>
+            <p style="font-size: 1.5em;">1.5em 지정</p>
+            <p style="font-size: 2em;">2em 지정</p>
+        </div>
+
+        <h3>rem으로 크기를 지정했을 경우</h3>
+        <div>
+            <p style="font-size: 0.5rem;">0.5rem 지정</p>
+            <p style="font-size: 1rem;">1rem로 지정</p>
+            <p>크기 조정 안함</p>
+            <p style="font-size: 1.5rem;">1.5rem 지정</p>
+            <p style="font-size: 2rem;">2rem 지정</p>
+        </div>
+
+        <h3>em과 rem의 차이점</h3>
+        <div>
+            <p style="font-size: 2em;">2em으로 설정 시</p>
+            <div style="font-size: 20px;">
+                <p style="font-size: 2em;">부모 태그의 font-size가 20px일때 2em으로 설정 시</p>
+            </div>
+        </div>
+        <div>
+            <p style="font-size: 2rem;">2rem으로 설정 시</p>
+            <div style="font-size: 20px;">
+                <p style="font-size: 2rem;">부모 태그의 font-size가 20px일때 2rem으로 설정 시</p>
+            </div>
+        </div>
+
+        <h3>font 속성 사용하기</h3>
+        <!-- font 속성은 font-style, font-weight, font-size, font-family 속성을 순서대로 한번에 입력하는 속성 -->
+        <!-- font-family 순서에 , 를 사용하여 여러가지 폰트를 입력할 수 있음 -->
+        <!-- 중간에 속성 생략 가능 -->
+        <p style="font: italic bold 24px 궁서;">font 속성 사용</p>
+
+        <h2>기본 폰트 사용하기</h2>
+        <h2 class="hi-melody-regular"> 구글 폰트 사용 하기</h2>
+
+        <h2>기본 폰트 사용하기2</h2>
+        <h2 class="gugi-regular"> 구글 폰트 사용 하기2</h2>
+
+    </div>
+
+    <div>
+        <h3>color 속성 사용하기</h3>
+        <p style="color: red;">알려진 색상명으로 color 설정하기</p>
+        <p style="color: lime;">알려진 색상명으로 color 설정하기</p>
+        <p style="color: blue;">알려진 색상명으로 color 설정하기</p>
+
+        <br><br>
+
+        <p style="color: #ff0000;">16진수 표기법으로 color 설정하기</p>
+        <p style="color: #00ff00;"> sty16진수 표기법으로 color 설정하기</p>
+        <p style="color: #0000ff;">16진수 표기법으로 color 설정하기</p>
+
+        <br><br>
+
+        <p style="color: rgb(255,0,0);">rgb 방법으로 color 표기하기</p>
+        <p style="color: rgb(0, 255, 0);">rgb 방법으로 color 표기하기</p>
+        <p style="color: rgb(0, 0, 255);">rgb 방법으로 color 표기하기</p>
+        <p style="color: rgba(255, 0, 0, 0.5);">rgb 방법으로 alpha 값 표기하기</p>
+        <p style="color: rgba(255, 0, 0, 0.2);">rgb 방법으로 alpha 값 표기하기</p>
+
+        <div style="width: 200px; height: 200px; border: 1px solid black; background-color: rgb(0, 0, 255);">
+            <div style="width: 100px; height: 100px; background-color: rgba(255, 0, 0, 0.5);"></div>
+        </div>
+
+        <div style="width: 100px; height: 100px; background-color: rgba(255, 0, 0, 0.5);"></div>
+    </div>
+
+    <br><br>
+
+    <p style="color: hsl(0, 100%, 50%);">hsl 방법으로 color 표기하기</p>
+    <p style="color: hsl(120, 100%, 50%);">hsl 방법으로 color 표기하기</p>
+    <p style="color: hsl(240, 100%, 50%);">hsl 방법으로 color 표기하기</p>
+    <p style="color: hsla(0, 100%, 50%, 0.5);">hsla 방법으로 alpha 값 표기하기</p>
+    <p style="color: hsla(0, 100%, 50%, 0.2);">hsla 방법으로 alpha 값 표기하기</p>
+
+    <div>
+        <h2>텍스트 정렬하기</h2>
+        <p style="text-align: start;">왼쪽 정렬, start/left (기본값)</p>
+        <p style="text-align: end;">오른쪽 정렬, end/right</p>
+        <p style="text-align: center;">중앙 정렬, center</p>
+    </div>
+
+    <br><br><br>
+
+    <div>
+        <h2>line-height 사용하기</h2>
+
+        <p>껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다</p>
+        <p class="small-line" style="line-height: 0.7;">껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이
+            붉고 통통하다</p>
+        <p class="big-line" style="line-height: 2.5;
+">껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다</p>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+        <h2>text-decoration 사용하기</h2>
+        <p style="text-decoration: none;">none 사용 시</p>
+        <p style="text-decoration: underline;">underline 사용 시</p>
+        <p style="text-decoration: overline;">overline 사용 시></p>
+        <p style="text-decoration: line-through;">line-through 사용 시</p>
+        <a href="http://www.naver.com" target="_blank" style="text-decoration: none;">네이버 홈페이지</a>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+        <h2>text-shadow 사용하기</h2>
+
+        <h2 class="shadow1">HTML</h2>
+        <h2 class="shadow2">CSS3</h2>
+        <h2 class="shadow3">Javascript</h2>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+        <h2>text-transform, letter-spacing, word-spacing</h2>
+
+        <p style="text-transform: none;">html5</p>
+        <p style="text-transform: capitalize;">css3</p>
+        <p style="text-transform: uppercase;">javascript</p>
+        <p style="text-transform: lowercase;">bootstrap</p>
+        
+        <br><br>
+
+        <p style="letter-spacing: normal;">javascript</p>
+        <p style="letter-spacing: 0.5em;">javascript</p>
+        <p style="letter-spacing: 0.2em;">javascript</p>
+        
+        <p style="word-spacing: normal;">html css javascript</p>
+        <p style="word-spacing: 0.5em;">html css javascript</p>
+        <p style="word-spacing: 0.2em;">html css javascript</p>
+
+    </div>
+
+</body>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</html>

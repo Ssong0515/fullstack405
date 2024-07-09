@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>부트스트랩의 form 사용하기</h2>
+
+    <div>
+      <h3>기본적인 form</h3>
+      <!-- 부트스트랩에서 사용자 입력을 위한 form 태그들을 새로 디자인 하여 제공함 -->
+      <!-- input 태그와 textarea 태그의 class에 .form-control을 추가하여 사용함 -->
+      <!-- input 태그가 display: block 형식으로 변경 -->
+      <!-- label 태그의 class에 .form-label을 사용함 -->
+      <!-- input 태그와 label 태그를 묶는 부모 태그로 div 태그를 사용함 -->
+      <!-- textarea 태그의 class에 .form-control을 사용하여 부트스트랩 디자인 적용 시, cols 속성을 사용 하지 않는다 -->
+      <!-- 적용시, 부모 태그의 크기만큼 textarea의 width를 설정하기 때문 -->
+
+      <h3>부트스트랩 X</h3>
+
+      <form>
+        <label for="user-id1">User ID: </label>
+        <input type="text" id="user-id1" name="userId" placeholder="사용자 ID를 입력하세요">
+        <br>
+        <label for="user-pw1">User PW: </label>
+        <input type="password" id="user-Pw1" name="userPw" placeholder="사용자 비밀번호를 입력하세요">
+        <br>
+        <label for="user-comment1">Comment: </label>
+        <textarea name="userComment1" id="user-comment1" cols="30" rows="5"></textarea>
+        <br>
+        <button type="submit">로그인</button>
+        <button type="reset">취소</button>
+      </form>
+
+
+      <br><br>
+
+      <h3>부트스트랩 o</h3>
+
+      <div class="row">
+        <div class="col-4 mx-auto">
+
+          <form>
+            <div class="my-3">
+              <label for="user-id" class="form-label">User ID: </label>
+              <input type="text" class="form-control" id="user-id" name="userId" placeholder="사용자 ID를 입력하세요">
+            </div>
+
+            <div class="my-3">
+              <label for="user-pw" class="form-label">User PW: </label>
+              <input type="password" class="form-control" id="user-pw" name="userPw" placeholder="사용자 비밀번호를 입력하세요">
+            </div>
+
+            <div class="my-3">
+              <label for="user-comment" class="form-label">Comment: </label>
+              <textarea name="userComment" id="user-comment" class="form-control" rows="5"></textarea>
+            </div>
+
+            <!-- d-grid를 쓰면 부모 그리드 크기에 맞게 너비를 확장 함 -->
+            <!-- 안쓰면 텍스트 크기에 맞게 쉬링크 됨 -->
+            <div class="row">
+              <div class="col d-grid">
+                <button type="submit" class="btn btn-primary btn-block">로그인</button>
+              </div>
+              <div class="col d-grid">
+                <button type="reset" class="btn btn-secondary btn-block">취소</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+      <br>
+      <hr><br>
+
+      <div>
+        <h3>form의 크기 설정</h3>
+        <!-- input 태그의 class에 .form-control-lg, .form-control.sm 추가 시, input 태그의 크기를 변경 할 수 있음 -->
+        <!-- input 태그의 html 속성 중 disabled를 사용 시, 해당 input 태그를 비활성화 할 수 있음 -->
+        <!-- input 태그의 html 속성 중 readonly 사용 시, 해당 input 태그를 '읽기전용'으로 변경 할 수 있음 -->
+        <!-- disabled와 readonly의 차이점은 disabled로 설정 시, 서버로 해당 input 태그의 데이터가 전달 되지 않음 -->
+        <!-- readonly로 설정 시, 해당 input 태그를 읽기만 가능하고 수정은 불가능하지만 서버로 해당 input 태그의 데이터를 전달 할 수 있음 -->
+
+        <form action="#" method="get">
+          <div class="my-3">
+            <label for="title1">제목: </label>
+            <input type="text" class="form-control" id="title1" name="title1" placeholder="글 제목을 입력해주세요" readonly>
+          </div>
+
+          <div class="my-3">
+            <label for="writer1">글쓴이: </label>
+            <input type="text" class="form-control" id="writer1" name="writer1" placeholder="글쓴이를 입력해주세요">
+          </div>
+
+          <div class="my-3">
+            <label for="comment1">내용: </label>
+            <textarea name="comment1" id="comment1" class="form-control" rows="5" placeholder="내용을 입력해주세요"></textarea>
+          </div>
+
+          <div class="my-3">
+            <button type="submit" class="btn btn-primary">확인</button>
+            <button type="reset" class="btn btn-primary">취소</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+      <h3>Plain text</h3>
+      <!-- input 태그의 class에 .form-control-plaintext 를 대신 사용 시, input 태그의 외부 테두리가 없는 input 태그를 생성 -->
+
+      <div class="my-3">
+        <label for="basic-input">기본 input 박스</label>
+        <input type="text" class="form-control" id="basic-input" placeholder="기본 input 박스 입니다.">
+      </div>
+      <div class="my-3">
+        <label for="plain-input">plain text 박스</label>
+        <input type="text" class="form-control-plaintext border-bottom" placeholder="plain input 박스 입니다.">
+      </div>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div>
+      <h3>inline form</h3>
+      <!-- 부트스트랩의 form 디자인은 기본적으로 display: block가 적용 된 적측형 구조 -->
+      <!-- 하나의 라인에 사용자 입력을 위한 input 태그를 2개 이상 사용하고자 하는 경우 -->
+      <!-- 부트스트랩의 grid 시스템을 사용하여 form 태그의 자식 태그로 div 추가하고, class에 .row를 추가함 -->
+      <!-- .row class를 사용한 div의 자식 태그로 div를 추가하고, class에 .col-{반응형크기}-{크기}를 추가함 -->
+      <!-- .col-{반응형크기}-{크기}를 사용한 div의 자식 태그로 input 및 여러가지 태그를 사용함 -->
+
+      <form>
+        <div class="row">
+          <div class="col-sm">
+            <input type="text" class="form-control" name="user-id3" placeholder="사용자 아이디를 입력하세요">
+          </div>
+          <div class="col-sm">
+            <input type="password" class="form-control" name="user-pw3" placeholder="사용자 비밀번호를 입력하세요">
+          </div>
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary">로그인</button>
+            <button type="reset" class="btn btn-primary">취소</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+    <br>
+    <hr><br>
+
+    <h2>부트스트랩 select box</h2>
+
+    <div>
+      <h3>기본 select box</h3>
+      <!-- select 태그의 class에 .form-select 추가하여 사용하면 미리 디자인 된 select box를 제공함 -->
+      <!-- select 태그의 multiple 속성을 추가하면 여러개를 선택 할 수 있는 select box를 제공함 -->
+      <!-- select 태그의 class에 .form-select-lg, .form-select-sm을 추가하여 select box의 크기를 정할 수 있음 -->
+      <!-- select 태그에 disabled 속성을 추가하면 해당 select box를 비활성화 함 -->
+
+      <form>
+        <label for="sel1" class="form-label">과일 선택: </label>
+        <select id="sel1" name="sel1">
+          <option value="사과">사과</option>
+          <option value="수박">수박</option>
+          <option value="복숭아">복숭아</option>
+          <option value="참외">참외</option>
+          <option value="배">배</option>
+        </select>
+        <button type="submit" class="btn btn-primary">전송</button>
+      </form>
+
+      <br>
+
+      <form>
+        <label for="sel2" class="form-label">과일 선택: </label>
+        <select name="sel2" id="sel2" class="form-select">
+          <option value="사과">사과</option>
+          <option value="수박">수박</option>
+          <option value="복숭아">복숭아</option>
+          <option value="참외">참외</option>
+          <option value="배">배</option>
+        </select>
+        <button type="submit" class="btn btn-primary">전송</button>
+      </form>
+
+
+      <br>
+
+      <div class="my-3">
+        <label for="sel-lg">큰 크기의 select box</label>
+        <select name="sellg" id="sel-lg" class="form-select form-select-lg">
+          <option value="사과">사과</option>
+          <option value="수박">수박</option>
+          <option value="복숭아">복숭아</option>
+          <option value="참외">참외</option>
+          <option value="배">배</option>
+        </select>
+      </div>
+
+      <div class="my-3">
+        <label for="sel-normal">기본 크기의 select box</label>
+        <select name="selNormal" id="sel-normal" class="form-select">
+          <option value="사과">사과</option>
+          <option value="수박">수박</option>
+          <option value="복숭아">복숭아</option>
+          <option value="참외">참외</option>
+          <option value="배">배</option>
+        </select>
+      </div>
+
+      <div class="my-3">
+        <label for="sel-sm">작은 크기의 select box</label>
+        <select name="selSm" id="sel-sm" class="form-select form-select-sm">
+          <option value="사과">사과</option>
+          <option value="수박">수박</option>
+          <option value="복숭아">복숭아</option>
+          <option value="참외">참외</option>
+          <option value="배">배</option>
+        </select>
+      </div>
+
+      <br><hr><br>
+
+      <div>
+        <h3>data list</h3>
+        <!-- select 태그 대신 input 태그와 datalist 태그를 사용함 -->
+        <!-- input 태그의 class에 .form-control을 사용하고, list 속성을 추가하여 datalist의 id 값을 설정함 -->
+        <!-- datalist 태그의 id 속성값과 input 태그의 list 속성값과 동일 -->
+        <!-- datalist 태그의 자식 태그인 option 태그에 필요한 데이터를 입력하여 사용 -->
+
+        <div class="my-3">
+          <label for="sel-browser" class="form-label">웹 브라우저 선택: </label>
+          <input type="text" class="form-control" id="sel-browser" name="selBrowser" list="datalist-browser">
+          <datalist id="datalist-browser">
+            <option value="MS 엣지">엣지</option>
+            <option value="구글 크롬">크롬</option>
+            <option value="모질라 파이어폭스">파이어폭스</option>
+            <option value="애플 사파리">사파리</option>
+            <option value="오페라 브라우저">오페라</option>
+          </datalist>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

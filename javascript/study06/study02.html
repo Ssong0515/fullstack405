@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+
+    <style>
+        .blue {
+            color: dodgerblue;
+        }
+
+        .import {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            // get/set 함수: jquery를 사용하여 html 태그의 정보를 쉽게 입력하거나 가져오기 위한 함수
+            // text(값): 지정한 태그의 시작 태그와 끝 태그 사이의 text를 가져오거나 입력하기 위한 함수
+            // 매개변수가 없으면: text 가져오기
+            // 매개변수가 있으면: text 입력하기
+            // html(값): text()와 동일한 긴으, text에 html 태그가 있을 경우 html 태그로 동작시킴
+            // val(값): input 태그의 value 속성값을 입력하거나 가져오는 함수
+            // 매개변수가 없으면: value 가져오기
+            // 매개변수가 있으면: value 입력하기
+
+            $("#btn-text").on("click", function () {
+                const text = $("#btn-text").text();
+                alert(text);
+            });
+
+            $("#btn-html").on("click", function () {
+                const text = $("#btn-html").html();
+                alert(text);
+            });
+
+            $("#btn-val").on("click", function () {
+                const text = $("#btn-val").val();
+                alert(text);
+            })
+
+            $("#btn-text2").on("click", function () {
+                const text = $("#input-text").val();
+                $("#input-p").text(text);
+            })
+
+            $("#btn-html2").on("click", function () {
+                const text = $("#input-text").val();
+                $("#input-p").html(text);
+            })
+
+            $("#btn-val2").on("click", function () {
+                const text = "<em>글자</em>를 입력하세요"
+                $("#input-text").val(text);
+            })
+
+            /*
+            attr: jquery에서 제공하는 지정한 속성의 값을 입력하거나 가져오는 함수
+            입력 시 여러가지의 속성을 동시에 입력할 수 있음
+
+            사용법:
+            가져오기: $("css선택자").attr("css속성명");
+            입력하기: $("css선택자").attr("css속성명", "속성값");
+                      $("css선택자").attr({"css속성명1": "속성값1, "css속성명2": "속성값2", ...});
+             */
+
+            $("#btn-attr-get").on("click", function () {
+                const text = $("#div01 #tg1").attr("href");
+                alert("링크 주소는: " + text + " 입니다.");
+            });
+
+            $("#btn-attr-set1").on("click", function () {
+                $("#div01 #tg1").attr("href", "http://www.daum.net");
+            });
+
+            $("#btn-attr-set2").on("click", function () {
+                $("#div01 #tg1").attr({
+                    "href": "http://www.apple.co.kr",
+                    "target": "_self",
+                    "class": "btn btn-outline-secondary"
+                });
+            });
+
+            /*
+            jquery에서 html 태그를 쉽게 추가 삭제하기 위해서 함수를 제공
+            html 태그를 추가할 경우 사용할 수 있는 방식이 4가지임
+            1. 추가할 태그를 모두 문자열로 입력
+            2. jquery를 사용하여 원하는 태그를 생성하고, 태그의 text를 text()로 추가함
+            3. 순수 자바스크립트 함수를 사용하여 태그를 추가
+            4. jquery의 아래 4가지 라이브러리를 사용하는 방식
+
+            append(): 지정한 태그의 마지막 부분에 태그를 추가함
+            prepend(): 지정한 태그의 시작 부분에 태그를 추가함
+            after(): 지정한 태그의 바로 뒤에 태그를 추가함
+            before(): 지정한 태그의 바로 앞에 태그를 추가함
+
+            사용법: $("css선택자").append | prepend() | after() | before()(html태그);
+
+            remove(): 지정한 태그를 삭제(자손 태그 포함)
+            empty(): 지정한 태그의 자손 태그를 삭제
+
+            사용법: $("css선택자).remove | empty();
+
+             */
+
+            $("#btn-add1").on("click", function () {
+                const text1 = "<p>추가된 태그 1</p>";
+                const text2 = $("<p></p>").text("추가된 태그 2");
+                const text3 = document.createElement("p");
+                text3.innerText = text1;
+
+                const tag = document.querySelector("#div02".tg1)
+
+                $("#div02 .tg1").append(text1, text2, text3);
+            })
+
+            let prependCount = 1;
+            let appendCount = 1;
+            $("#btn-prepend").on("click", function () {
+                $("#div02 .tg2 > ol").prepend("<li><strong>추가된 아이템" + prependCount + "</strong></li>");
+                prependCount++;
+            });
+            $("#btn-append").on("click", function () {
+                $("#div02 .tg2 > ol").append("<li><strong>추가된 아이템" + appendCount + "</strong></li>");
+                appendCount++;
+            });
+            $("#btn-before").on("click", function () {
+                $("#div02 .tg2 > ol").before("<li><strong>추가된 아이템" + prependCount + "</strong></li>");
+                prependCount++;
+            });
+            $("#btn-after").on("click", function () {
+                $("#div02 .tg2 > ol").after("<li><strong>추가된 아이템" + appendCount + "</strong></li>");
+                appendCount++;
+            });
+
+            $("#btn-remove").on("click", function () {
+                $("#div02 .tg3").remove();
+            });
+
+            $("#btn-empty").on("click", function () {
+                $("#div02 .tg3").empty();
+            });
+
+            /*
+            jquery를 사용하여 CSS를 쉽게 제어할 수 있도록 함수를 제공함
+            sytle 태그 안에서 미리 지정해 놓은 클래스를 추가하거나 삭제할 수 있음
+
+            addClass(): 지정한 태그에 하나 이상의 클래스를 추가
+            removeClass(): 지정한 태그에서 지정한 클래스를 삭제
+            toggleClass(): 지정한 태그에서 addClass/removeClass의 기능을 번갈아가며 실행
+
+            사용방법:
+            $("css선택자").addClass("클래스명");
+            $("css선택자").removeClass("클래스명");
+            $("css선택자").toggleClass("클래스명");
+
+            css(): 지정한 태그에 css 속성을 직접 입력하거나 가져오는 함수
+             */
+
+            $("#btn-add-class").on("click", function () {
+                $("#div03 h4, #div03 h5, #div03 p").addClass("blue")
+                $("div03 .tg1").addClass("important")
+            })
+            $("#btn-remove-class").on("click", function () {
+                $("#div03")
+                $("#div03 h4, #div03 h5, #div03 p").removeClass("blue")
+            })
+            $("#btn-add-class").on("click", function () {
+                $("#div03 h4, #div03 h5, #div03 p").togleClass("blue")
+            })
+            $("#btn-add-class").on("click", function () {
+                $("#div03")
+            })
+
+
+            //     css() : 지정한 태그에 지정한 css 속성을 직접 입력하거나 가져오는 함수
+
+            //     사용방법 :
+            //     가져오기 - var 변수명 = $("css선택자").css("css속성명");
+            //     설정하기 - $("css선택자").css("css속성명", "속성값");
+            //     설정하기 - $("css선택자").css({"css속성명1": "속성값1", "css속성명2": "속성값2", ...});
+
+            $("#btn-css1").on("click", function () {
+                const value = $("#div03 .tg1").css("background-color");
+                alert("지정한 태그의 background-color : " + value);
+            });
+
+            $("#btn-css2").on("click", function () {
+                $("#div03 .tg2").css("background-color", "yellow");
+            });
+
+            $("#btn-css3").on("click", function () {
+                $("#div03 .tg3").css({
+                    "background-color": "green",
+                    "font-size": "24px",
+                    "font-weight": "bold"
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="container mt-5">
+    <h2>get/set 함수</h2>
+    <div id="div01">
+        <h3>text / html / val</h3>
+
+        <div>
+            <button type="button" class="btn btn-primary" id="btn-text"><strong>text()</strong>사용</button>
+            <button type="button" class="btn btn-primary" id="btn-html"><strong>html()</strong>사용</button>
+            <input type="button" class="btn btn-primary" id="btn-val" value="val() 사용">
+            <br>
+            <p id="input-p" class="fs-3"></p>
+            <input type="text" class="form-control" id="input-text" value="<strong>글자</strong>를 입력하세요">
+            <button type="button" class="btn btn-primary" id="btn-text2">text()로 입력</button>
+            <button type="button" class="btn btn-primary" id="btn-html2">html()로 입력</button>
+            <button type="button" class="btn btn-primary" id="btn-val2">val()로 입력</button>
+
+            <br><br>
+
+            <button type="button" class="btn btn-primary" id="btn-attr-get">attr()로 가져오기</button>
+            <button type="button" class="btn btn-primary" id="btn-attr-set1">attr()로 입력하기</button>
+            <button type="button" class="btn btn-primary" id="btn-attr-set2">attr()로 여러속성 입력하기</button>
+
+            <p><a href="http://www.naver.com" target="_blank" class="btn btn-link" id="tg1">네이버 홈페이지</a></p>
+        </div>
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <h2>add / remove</h2>
+    <div id="div02">
+        <h3>태그 추가하기</h3>
+        <button type="button" class="btn btn-primary mb-3" id="btn-add1">태그 추가</button>
+        <div class="tg1 p-3 border">
+            <p>기본내용</p>
+        </div>
+
+        <br/>
+        <h3>append(), prepend(), after(), before()</h3>
+
+        <button type="button" class="btn btn-primary" id="btn-prepend">prepend() 사용</button>
+        <button type="button" class="btn btn-primary" id="btn-append">append() 사용</button>
+        <button type="button" class="btn btn-primary" id="btn-before">before() 사용</button>
+        <button type="button" class="btn btn-primary" id="btn-after">after() 사용</button>
+
+        <div class="tg2 p-3 border">
+            <ol>
+                <li>리스트 아이템1</li>
+                <li>리스트 아이템2</li>
+                <li>리스트 아이템3</li>
+            </ol>
+        </div>
+
+        <br/><br/>
+
+        <h3>remove() / empty()</h3>
+        <button type="button" class="btn btn-primary" id="btn-remove">remove 사용</button>
+        <button type="button" class="btn btn-primary" id="btn-empty">emtpy 사용</button>
+        <div class="tg3 p-3 border mt-3 bg-primary-subtle" style="height: 200px">
+            <p>버튼 클릭 시 삭제 될 태그1</p>
+            <p>버튼 클릭 시 삭제 될 태그2</p>
+            <p>삭제 될 태그 <br><a href="#">삭제 될 태그의 자식 태그</a></p>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>클래스 속성 추가, 삭제</h2>
+
+    <div id="div03">
+        <h3>addClass, removeClass, toggleClass</h3>
+        <button type="button" class="btn btn-primary" id="btn-add-class">속성 추가</button>
+        <button type="button" class="btn btn-primary" id="btn-remove-class">속성 삭제</button>
+        <button type="button" class="btn btn-primary" id="btn-toggle-class">속성 on/off</button>
+
+        <div>
+            <h4>버튼 클릭 시 클래스 속성 추가/삭제</h4>
+            <h5>버튼 클릭 시 클래스 속성 추가/삭제</h5>
+            <p>버튼 클릭 시 클래스 속성 추가/삭제</p>
+            <p>버튼 클릭 시 클래스 속성 추가/삭제</p>
+        </div>
+
+        <br>
+
+        <h3>css()</h3>
+
+        <button type="button" class="btn btn-outline-primary" id="btn-css1">css로 값 가져오기</button>
+        <button type="button" class="btn btn-outline-primary" id="btn-css2">css로 값 설정하기</button>
+        <button type="button" class="btn btn-outline-primary" id="btn-css3">css로 값 여러개 설정하기</button>
+        <div class="mt-3">
+            <p class="tg1" style="background-color: #ff0000">배경 색상이 있는 p 태그</p>
+            <p class="tg2" style="background-color: #00ff00">배경 색상이 있는 p 태그</p>
+            <p class="tg3" style="background-color: #0000ff">배경 색상이 있는 p 태그</p>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

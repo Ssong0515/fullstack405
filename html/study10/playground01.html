@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>playground01</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="my-3">기본 navbar</h1>
+
+    <nav class="navbar navbar-expand bg-primary navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="my-3">세로 형태 navbar</h1>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="my-3">메뉴 정렬, 테마 컬러, 메뉴 활성화/비활성화</h1>
+    <nav class="navbar navbar-expand bg-warning">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand bg-warning">
+      <div class="container-fluid justify-content-center">
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link active">menu 2</a>
+          <a href="#" class="nav-link disabled">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand bg-warning justify-content-end">
+      <!-- <div class="container-fluid"> -->
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      <!-- </div> -->
+    </nav>
+
+    <h1 class="my-3">네비게이션 바에 브랜드 로고 넣기, 네비게이션바에 텍스트 넣기</h1>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Logo</a>
+        <ul class="navbar-nav me-auto">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Logo</a>
+        <span class="navbar-text">네비 텍스트</span>
+        <ul class="navbar-nav me-auto">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="my-3">네비게이션바 메뉴 접기/펴기</h1>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="menus"></button>
+      
+      <div class="container-fluid navibar" id="menus">
+        <ul class="navbar-nav">
+        <a href="#" class="navbar-brand">Logo</a>
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="my-3">드랍다운 메뉴가 있는 네비게이션 바</h1>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li>
+            <a href="#" class="nav-link">menu 1</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link">menu 2</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">menu 3</a>
+            <ul class="dropdown-menu">
+              <a href="#" class="dropdown-item">sub-menu1</a>
+              <a href="#" class="dropdown-item">sub-menu2</a>
+              <a href="#" class="dropdown-item">sub-menu3</a>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="my-3">네비게이션 바에 입력창 넣기</h1>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Logo</a>
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+
+        </ul>
+        <form class="d-flex">
+          <input type="text" class="form-control me-2" placeholder="Search...">
+          <button type="submit" class="btn btn-info">submit</button>
+        </form>
+      </div>
+    </nav>
+
+    <h1 class="my-3">네비게이션 바 상단/하단 고정, sticky 네비게이션 바</h1>
+    <nav class="navbar navbar-expand navbar-dark bg-primary sticky-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Logo</a>
+        <ul class="navbar-nav">
+          <a href="#" class="nav-link">menu 1</a>
+          <a href="#" class="nav-link">menu 2</a>
+          <a href="#" class="nav-link">menu 3</a>
+
+        </ul>
+        <form class="d-flex">
+          <input type="text" class="form-control me-2" placeholder="Search...">
+          <button type="submit" class="btn btn-info">submit</button>
+        </form>
+      </div>
+    </nav>
+
+  </div>
+  
+</body>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

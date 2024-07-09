@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/bootstrap.bundle.js"></script>
+
+  <style>
+    .roulette-container {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 10px solid #000;
+        position: relative;
+        margin: 50px auto;
+    }
+
+    .roulette-segment {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background: #f00;
+        border: 1px solid #000;
+        transform-origin: 100% 100%;
+    
+    }
+
+    .roulette-segment {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background: #f00;
+            border: 1px solid #000;
+            transform-origin: 100% 100%;
+        }
+
+        /* .roulette-segment {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background: #f00;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            transform-origin: 100% 100%;
+        } */
+
+</style>
+
+  <script>
+
+  </script>
+
+</head>
+<body>
+  <div class="container text-center">
+    <div class="roulette-container" id="roulette">
+        <!-- 세그먼트를 나누어서 룰렛을 채워 넣습니다 -->
+        <div class="roulette-segment" style="transform: rotate(0deg); background: #ff0;"></div>
+        <div class="roulette-segment" style="transform: rotate(45deg); background: #0f0;"></div>
+        <div class="roulette-segment" style="transform: rotate(90deg); background: #00f;"></div>
+        <div class="roulette-segment" style="transform: rotate(135deg); background: #f0f;"></div>
+        <div class="roulette-segment" style="transform: rotate(180deg); background: #0ff;"></div>
+        <div class="roulette-segment" style="transform: rotate(225deg); background: #ff0;"></div>
+        <div class="roulette-segment" style="transform: rotate(270deg); background: #0f0;"></div>
+        <div class="roulette-segment" style="transform: rotate(315deg); background: #00f;"></div>
+    </div>
+    <button id="spinButton" class="btn btn-primary mt-3">Spin</button>
+</div>
+</body>
+</html>

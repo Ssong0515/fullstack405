@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩으로 만드는 기본 웹 페이지 구성</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+    <style>
+        .fakeimg {
+            /* height: 200px;
+            background-color: #aaa; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 시멘틱 태그를 사용하여 header, main, footer 구역을 나눔 -->
+    <header>
+        <!-- 웹 사이트의 최상단 제목 부분 -->
+        <!-- p-5: padding: 48px -->
+        <!-- bg-primary: background-color를 부트스크랩의 테마 컬러 중 파랑색을 설정 -->
+        <!-- text-whit: 글자색을 흰색으로 설정 -->
+        <!-- text-center: 글자를 중앙 정렬 -->
+        <div class="p-5 bg-primary text-white text-center">
+            <h1>처음 만드는 부트스트랩 웹 페이지</h1>
+            <p>반응형 웹 디자인이 적용되어 있으니 크기를 변경해 보세요</p>
+        </div>
+
+        <!-- navbar navbar-expand: 부트스트랩에서 제공하는 네비게이션 바 디자인 -->
+        <!-- bg-dark: 부트스트랩 테마 컬러 중 검정색으로 배경 지정 -->
+        <!-- navbar-dark: 부트스트랩에서 제공하는 네비게이션 바에서 배경 테마가 검정색일때 글자색상을 검정색의 대비색으로 표시 -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+
+                <!-- navbar-nav: 부트스트랩의 네비게이션바에서 메뉴를 표시 -->
+                <!-- nav-item: 부트스트랩의 네비게이션바에서 실제 메뉴 아이템 -->
+                <!-- nav-link: 부트스트랩의 네비게이션바에서 링크 버튼 -->
+                <!-- active: 부트스트랩의 네비게이션바의 메뉴 중 활성화 된 버튼으로 표시 -->
+                <!-- disabled: 부트스트랩의 네비게이션바의 메뉴 중 비활성화 된 버튼으로 표시 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">메뉴1</a>
+                    </li>
+                    <li class="new-item">
+                        <a href="#" class="nav-link">메뉴2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">메뉴3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link disabled">메뉴4</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- mt-5: margin-top: 48px을 부트스트랩에서 쉽게 사용하도록 class로 제공함 mt-0 ~ mt-5까지 존재 -->
+    <main class="container mt-5">
+
+        <div class="row">
+            <!-- 왼쪽 메뉴 -->
+            <div class="col-sm-3">
+                <h2>About me:</h2>                
+                <h5>Photo for me</h5>
+                <div class="fakeimg"><img src="../../이미지/카리나2.jpeg" alt="카리나 여친짤" class="mw-100 mh-100 mx-auto"></div>
+                <!-- mh-100: 부트스트랩에서 제공하는 클래스로 max-height를 100%로 설정(부모의 100%) -->
+                <!-- d-block: display: block을 부트스트랩에서 class로 제공함 -->
+                <!-- mx-auto: margin-left, margin-right의 값이 모두 auto -->
+                <p>원하는 글을 아무꺼나 입력하세요...</p>
+
+                <h3 class="mt-4">Links</h3>
+                <!-- nav-pillls 네비 모양을 알약 모양으로 약간 둥글게 만들어줌 -->
+                <!-- flex-column 가로 방향으로 되는 것을 세로 방향으로 변경 해 줌 -->
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">메뉴1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">메뉴2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">메뉴3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">메뉴4</a>
+                    </li>
+                </ul>
+                <hr class="d-sm-none">
+            </div>
+
+
+            <!-- 메인 컨텐츠 -->
+            <div class="col-sm-9">
+                <div>
+                    <h2>제목</h2>
+                    <h5>내용 간단 설명, 2024.05.02</h5>
+                    <div class="fakeimg"><img src="../../이미지/카리나5.jpg" alt="내여친" class="mw-100 d-block"></div>
+                    <p>아무내용 입력..</p>
+                    <p>추가로 아무 내용 입력하시면 됩니다.</p>                
+                </div>
+
+                <div class="mb-5">
+                    <h2>제목</h2>
+                    <h5>내용 간단 설명, 2024.05.02</h5>
+                    <div class="fakeimg"><img src="../../이미지/장원영1.jpg" alt="내여친2" class="mw-100 d-block"></div>
+                    <p>아무내용 입력..</p>
+                    <p>추가로 아무 내용 입력하시면 됩니다.</p>                
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer class="mt-5 p-5 bg-dark text-white text-center">
+        <!-- lead: 글자 크기 조금 잡아줌 -->
+        <p class="lead">make by fullstack405</p>
+    </footer>
+    
+</body>
+</html>

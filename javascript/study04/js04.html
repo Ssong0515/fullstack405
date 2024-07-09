@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    console.log("\n ---- 함수의 4가지 형태 ---- \n")
+
+    function sum1(){
+      var a = 10;
+      var b = 20;
+      var c = a + b;
+      console.log("두 수의 덧셈은 " + c);
+    }
+
+    function sum2(a, b) {
+      var c = a + b
+      console.log("두 수의 덧셈은 " + c);
+    }
+
+    function sum3() {
+      var a = 10;
+      var b = 20;
+      var c = a + b;
+
+      return c;
+    }
+
+    function sum4(a, b) {
+      var c = a + b;
+
+      return c;
+    }
+
+    // 1번 타입 호출
+    sum1();
+
+    // 2번 타입 호출
+    sum2(10, 20);
+    sum2(100, 200);
+
+    // 3번 타입 호출
+    var result = sum3()
+    console.log("두 수의 덧셈은 " + result);
+    
+    result = sum3() + 100
+    console.log("두 수의 덧셈은 " + result);
+    
+    // 4번 타입 호출
+    var result = sum4(10, 20);
+    console.log("두 수의 덧셈은 " + result);
+
+    result = sum4(100, 200);
+    console.log("두 수의 덧셈은 " + (result + 100));
+
+    // 문제 1) 함수의 4가지 방식을 사용하여 덧셈, 뺄셈, 곱셈, 나눗셈용 함수를 작성하고 호출하여 사용하세요..
+    console.log("\n ---- 함수의 4가지 문제 ---- \n")
+
+    function sum(a, b) {
+      var c = a + b;
+      console.log("두 수의 덧셈은 " + c)
+    }
+
+    function sub() {
+      var a = 10;
+      var b = 20;
+      var c = a - b
+      return c
+    }
+
+    function multi(a, b) {
+      var c = a * b
+      return c
+    }
+
+    function div() {
+      var a = 10;
+      var b = 2;
+      var c = a/b;
+
+      console.log("두 수의 나눗셈은 " + c);
+    }
+
+    
+    sum(10, 20);
+
+    var result = sub();
+    console.log("두 수의 뺄셈은 " + result);
+
+
+    var result = multi(10, 20);
+    console.log("두 수의 곱셈은 " + result);
+    
+    div();
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

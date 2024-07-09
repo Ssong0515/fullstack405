@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 크기에 상관 없이 중앙에 버튼 배치하기</title>
+
+    <style>
+        /* body 태그에 배경 이미지 사용, 이미지 반복 안함, 이미지 위치 좌측 상단, 스크롤 상관 없이 배경 고정 */
+        body {
+            background: url(../../이미지/카리나2.jpeg) no-repeat left top fixed;
+
+            /* 배경 이미지가 화면 전체 크기로 나옴 */
+            background-size: cover;
+
+            /* 플렉스 박스 사용 */
+            display: flex;
+
+            /* 플렉스 박스 사용 시, 자식 태그의 가로 중앙 정렬 */
+            justify-content: center;
+
+            /* 플렉스 박스 사용 시, 행 마다의 세로 중앙 정렬 */
+            align-items: flex-end;
+
+            /* 최소 높이 설정, 디바이스에서 보이는 높이 그대로 100% 사용 */
+            /* min-height를 미설정 시, body태그의 높이가 컨텐츠(자식 태그의 높이)의 크기로 고정 됨 */
+            min-height: 100vh;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 1em 2em;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">클릭!!</button>
+</body>
+</html>

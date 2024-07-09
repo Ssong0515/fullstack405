@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습4</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h3>기본 드롭 다운 버튼</h3>
+    <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드롭 다운 버튼</button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-item">리스트1</li>
+      <li class="dropdown-item">리스트2</li>
+      <li class="dropdown-item">리스트3</li>
+    </ul> -->
+
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼</button>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">메뉴1</a></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><a href="#" class="dropdown-item">메뉴3</a></li>
+      </ul>
+    </div>
+
+    <br><br>
+    <h3>서브 메뉴 분배, 서브 메뉴 헤더, 서브 메뉴 활성화/비활성화</h3>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼</button>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">메뉴1</h6></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item active">메뉴3</a></li>
+        <li><a href="#" class="dropdown-item disabled">메뉴4</a></li>
+      </ul>
+    </div>
+
+    <br><br>
+    <h3>드랍다운 방향</h3>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼</button>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">메뉴1</h6></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item active">메뉴3</a></li>
+        <li><a href="#" class="dropdown-item disabled">메뉴4</a></li>
+      </ul>
+    </div>
+
+    <div class="dropup">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼</button>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">메뉴1</h6></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item active">메뉴3</a></li>
+        <li><a href="#" class="dropdown-item disabled">메뉴4</a></li>
+      </ul>
+    </div>
+    <div class="dropstart">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼</button>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">메뉴1</h6></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item active">메뉴3</a></li>
+        <li><a href="#" class="dropdown-item disabled">메뉴4</a></li>
+      </ul>
+    </div>
+    <div class="dropend">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼</button>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">메뉴1</h6></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item active">메뉴3</a></li>
+        <li><a href="#" class="dropdown-item disabled">메뉴4</a></li>
+      </ul>
+    </div>
+
+    <br><br>
+
+    <h3>드랍다운 메뉴 위치</h3>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍 다운 버튼이 오른쪽에서 아래로 내려오도록 하기</button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><h6 class="dropdown-header">메뉴1</h6></li>
+        <li><a href="#" class="dropdown-item">메뉴2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item active">메뉴3</a></li>
+        <li><a href="#" class="dropdown-item disabled">메뉴4</a></li>
+      </ul>
+    </div>
+
+    <br><br>
+
+    <h3>버튼 그룹 안에 있는 드랍다운 버튼</h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">버튼1</button>
+      <button type="button" class="btn btn-primary">버튼2</button>
+      <!-- <div class="btn-group"> -->
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">버튼3</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴1</a></li>
+          <li><a href="#" class="dropdown-item">메뉴2</a></li>
+          <li><a href="#" class="dropdown-item">메뉴3</a></li>
+        </ul>
+      <!-- </div> -->
+
+    </div>
+
+
+
+  </div>
+</body>
+</html>

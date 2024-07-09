@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            //     fade : jquery에서 지정한 태그에 fade in / out 효과를 주는 함수
+            //     속도는 slow, fas, 1/1000 초로 설정할 수 있음
+            //     fade 효과 사용 후 추가 기능을 사용하기 위해 2번째 매개변수로 콜백함수를 사용할 수 있음
+            //     fadeOut 사용 시 css의 display : none 상태가 되기 때문에 해당 태그가 있었던 공간까지 모두 숨김
+            //
+            //     fadeIn() : 지정한 태그를 점점 보이게 함
+            //     fadeOut() : 지정한 태그를 점점 흐려지게 하여 최종적으로 태그를 숨김
+            //     fadeToggle() : fadeIn/fadeOut 효과를 번갈아 사용
+            //     fadeTo() : 지정한 태그를 지정한 만큼 fade 효과와 애니메이션을 줌
+            //     사용법 : $("css선택자").fadeIn|fadeOut|fadeToggle(속도, 콜백함수);
+            //             $("css선택자").fadeTo(속도, 투명도, 콜백함수);
+            $("#btn-fade-in").on("click", function () {
+                $(".tg1").fadeIn();
+                $(".tg2").fadeIn("slow");
+                $(".tg3").fadeIn("fast");
+                $(".tg4").fadeIn(2000);
+                $(".tg5").fadeIn(2000, function () {
+                    alert("fade 사용 후 동작함");
+                });
+            });
+            $("#btn-fade-out").on("click", function () {
+                $(".tg1").fadeOut();
+                $(".tg2").fadeOut("slow");
+                $(".tg3").fadeOut("fast");
+                $(".tg4").fadeOut(2000);
+                $(".tg5").fadeOut(2000, function () {
+                    alert("fade 사용 후 동작함");
+                });
+            });
+            $("#btn-fade-toggle").on("click", function () {
+                $(".tg1").fadeToggle();
+                $(".tg2").fadeToggle("slow");
+                $(".tg3").fadeToggle("fast");
+                $(".tg4").fadeToggle(2000);
+                $(".tg5").fadeToggle(2000, function () {
+                    alert("fade 사용 후 동작함");
+                });
+            });
+            $("#btn-fade-to").on("click", function () {
+                $(".tg1").fadeTo("slow", 0.2);
+                $(".tg2").fadeTo("slow", 0.4);
+                $(".tg3").fadeTo("slow", 0.6);
+                $(".tg4").fadeTo("slow", 0.8);
+                $(".tg5").fadeTo("slow", 1.0, function () {
+                    alert("fade 사용 후 동작함");
+                });
+            });
+
+            //     slide : 지정한 영역을 보이거나 숨길 때 전체적으로 영역을 밀어서 이동하도록 하는 효과
+            //     최종적으로 css의 display: none; 을 사용하여 지정한 태그가 있었던 공간까지 숨김
+            //     속도는 slow, fast, 1/1000 초로 사용자 지정이 가능함
+            //     기능 사용 후 추가 기능을 사용하고자 할 경우 콜백함수를 2번째 매개변수로 추가
+            //
+            //     slideDown() : 지정한 영역을 슬라이드 애니메이션과 함께 보이도록 함
+            //     slideUp() : 지정한 영역을 슬라이드 애니메이션과 함께 숨기도록 함
+            //     slideToggle : slideDown/slideUp 을 번갈아가며 사용
+            //     사용법 : slideDown|slideUp|slideToggle(속도, 콜백함수);
+            $("#btn-slide-down").on("click", function () {
+                $("#div02 .tg1").slideDown("slow")
+            });
+            $("#btn-slide-up").on("click", function () {
+                $("#div02 .tg1").slideUp("fast")
+            });
+            $("#btn-slide-toggle").on("click", function () {
+                $("#div02 .tg1").slideToggle(2000, function () {
+                    alert("slideToggle 사용 후 동작")
+                });
+            });
+
+            //     animate : css의 애니메이션 효과를 쉽게 사용할 수 있도록 jquery에서 제공하는 함수
+            //     속도는 slow, fast, 1/1000 초를 사용자가 직접 입력할 수 있음
+            //     기능 종료 후 추가 기능을 사용하고자할 경우 3번째 매개변수로 콜백함수를 사용할 수 있음
+            //     css 선택자로 동일한 태그를 선택하고 animate를 연속으로 입력 시 순차적으로 애니메이션이 동작함
+            //     애니메이션에 사용하는 css 속성에 상대값을 적용할 수 있음
+            //
+            //     사용법 : $("css선택자").animate({css속성명1: 속성값1, css속성명2ㅣ 속성값2, ....}, 속도, 콜백함수);
+
+            $("#btn-animate1").on("click", function () {
+                $("#div03 .tg1").animate({left: '300px'}, 2000);
+            });
+            $("#btn-animate2").on("click", function () {
+                $("#div03 .tg1").animate({left: '300px', height: '200px', width: '200px'}, 2000);
+            });
+            $("#btn-animate3").on("click", function () {
+                $("#div03 .tg1").animate({
+                    left: '+=100px',
+                    height: '+=50px',
+                    width: '+=50px'
+                }, 1000);
+            });
+            $("#btn-animate4").on("click", function () {
+                $("#div03 .tg1").animate({left: '300px'}, 2000);
+                $("#div03 .tg1").animate({top: '300px'}, 2000);
+                $("#div03 .tg1").animate({left: '0px'}, 2000);
+                $("#div03 .tg1").animate({top: '0px'}, 2000);
+            });
+
+            /* stop : css의 애니메이션 효과를 사용 중 해당 함수가 실행되면 즉시 애니메이션 동작이 정지
+              2개의 매개변수 사용
+             첫번째 매개변수:
+                true: 모든 애니메이션 정지
+                false: 현재 애니메이션 정지
+                기본값: false
+
+             두번째 매개변수:
+
+             사용법: $("css선택자").stop(대기열 정지 여부, 애니메이션 끝으로);
+             */
+
+            $("#btn-stop1").on("click", function (){
+               $("#div03 .tg1").stop();
+            });
+            $("#btn-stop2").on("click", function (){
+                $("#div03 .tg1").stop(true, false);
+            });
+            $("#btn-stop3").on("click", function (){
+                $("#div03 .tg1").stop(false, false);
+            });
+            $("#btn-stop4").on("click", function (){
+                $("#div03 .tg1").stop(true, true);
+            });
+
+            /*
+            함수 체이닝: 함수의 기능 여러가지를 한번에 입력하는 방식
+            기존의 방식에서는 하나의 기능을 하나의 라인에 입력하도록 되어 있지만 체이닝 방식을 사용 시, 여러가지 기능을 하나의 라인에 모두 이어서 입력하여 입력한 모든 기능이 동작하도록 할 수 있음
+             */
+            $("#btn-chaining").on("click", function (){
+                $("#div03 .tg1")
+                    .animate({left: '300px'}, 2000)
+                    .animate({top: '300px'}, 2000)
+                    .animate({left: '0px'}, 2000)
+                    .animate({top: '0px'}, 2000);
+            })
+        });
+    </script>
+
+</head>
+<body>
+<div class="container mt-5">
+    <div id="div01">
+        <h3>fadeIn | fadeOut | fadeToggle | fadeTo</h3>
+        <div>
+            <button type="button" class="btn btn-primary" id="btn-fade-in">fadeIn효과</button>
+            <button type="button" class="btn btn-primary" id="btn-fade-out">fadeOut효과</button>
+            <button type="button" class="btn btn-primary" id="btn-fade-toggle">fadeToggle효과</button>
+            <button type="button" class="btn btn-primary" id="btn-fade-to">fadeTo효과</button>
+            <div class="box border border-dark bg-danger my-2 tg1"></div>
+            <div class="box border border-dark bg-success my-2 tg2"></div>
+            <div class="box border border-dark bg-primary my-2 tg3"></div>
+            <div class="box border border-dark bg-info my-2 tg4"></div>
+            <div class="box border border-dark bg-warning my-2 tg5"></div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="div02">
+        <h4>slideDown | slideUp | slideToggle</h4>
+        <div>
+            <button type="button" class="btn btn-primary" id="btn-slide-down">slideDown</button>
+            <button type="button" class="btn btn-primary" id="btn-slide-up">slideUp</button>
+            <button type="button" class="btn btn-primary" id="btn-slide-toggle">slideToggle</button>
+
+            <div class="mt-3">
+                <div class="area bg-primary-subtle border border-dark tg1">
+                    <p class="text-center my-5">버튼 클릭 시 보였다가 숨겨졌다가 하는 공간</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>animate</h3>
+
+        <div>
+            <button type="button" class="btn btn-primary" id="btn-animate1">animate</button>
+            <button type="button" class="btn btn-primary" id="btn-animate2">여러 속성 동시에 animate</button>
+            <button type="button" class="btn btn-primary" id="btn-animate3">상대값 사용 animate</button>
+            <button type="button" class="btn btn-primary" id="btn-animate4">순차적으로 animate</button>
+            <button type="button" class="btn btn-danger" id="btn-stop1">stop 기본값(false, false)</button>
+            <button type="button" class="btn btn-danger" id="btn-stop2">모두 stop(true, false)</button>
+            <button type="button" class="btn btn-danger" id="btn-stop3">stop(false, true)</button>
+            <button type="button" class="btn btn-danger" id="btn-stop4">stop(true, true)</button>
+            <button type="button" class="btn btn-primary" id="btn-chaining">체이닝으로 애니메이션 연속 사용</button>
+            <div class="mt-3 position-relative">
+                <div class="box border border-dark bg-info position-absolute tg1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px auto;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        #div01 .translate-x-right:active {
+            transform: translateX(100px);
+        }
+
+        #div01 .translate-y-bottom:hover {
+            transform: translateY(100px);
+        }
+
+        #div01 .translate-xy-right-bottom:hover {
+            transform: translate(100px, 100px);
+        }
+
+        #div02 .scaleXY:active {
+            transform: scale(3, 3);
+        }
+
+        #div02 .scaleX:active {
+            transform: scaleX(2);
+        }
+
+        #div02 .scaleY:active {
+            transform: scaleY(1.5);
+        }
+
+        #div03 .rotate-left:hover {
+            transform: rotate(90deg);
+        }
+
+        #div03 .rotate-right:hover {
+            transform: rotate(270deg);
+        }
+
+        #div03 .rotate-left2:hover {
+            transform: rotate(-90deg);
+        }
+
+        #div04 .skew-x {
+            transform: skewX(30deg);
+        }
+
+        #div04 .skew-y {
+            transform: skewY(30deg);
+        }
+
+        #div04 .skew-xy {
+            transform: skew(30deg, 30deg);
+        }
+
+        .big-box {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .small-box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #div05 .transition-x:active {
+            transition-property: width;
+            transition-duration: 5s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+            width: 400px;
+        }
+
+        #div05 .transition-xy:active {
+            width: 300px;
+            height: 300px;
+            transition: 5s ease 0s;
+        }
+
+        @keyframes shape {
+            from {
+                border: 1px solid transparent;
+            }
+            to {
+                border: 10px dotted black;
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes colors {
+            0% {background-color: red;}
+            30% {background-color: yellow;}
+            70% {background-color: blue;}
+            100% {background-color: orange;}
+        }
+
+        @keyframes move {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                left: 400px;
+                top: 0px;
+            }
+            50% {
+                left: 400px;
+                top: 400px;
+            }
+            75% {
+                left: 0px;
+                top: 400px;                
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+
+        }
+        
+        @keyframes toRight {
+            from {left: 0px; background-color: red;}
+            to {left: 500px; background-color: yellow;}
+        }
+
+        #box1:hover {
+            animation-name: shape;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #box2:hover {
+            animation-name: colors;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #box3:hover >div {
+            animation: move 10s infinite ease, colors 10s alternate ease;
+        }
+
+        #box4 {
+            animation-name: toRight;
+            animation-duration: 3s;
+            animation-delay: 0s;
+            animation-fill-mode: backwards;
+            /* animation-fill-mode: 애니메이션이 재생 되지 않는 상태일때 지정한 태그의 스타일을 지정 */
+            /* 
+            none(기본값): 애니메이션 실행 전 및 실행 후의 스타일을 적용하지 않음
+            forwards: 애니메이션 마지막 프레임의 스타일을 유지
+            backwards: 애니메이션 처음 프레임의 스타일로 돌아감
+            both: 상태에 따라 앞, 뒤의 스타일을 유지
+            */
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h2>transform</h2>
+
+        <div id="div01">
+            <h3>translate(), translateX(), translateY()</h3>
+            <div class="box red translate-x-right"></div>
+            <div class="box green translate-y-bottom"></div>
+            <div class="box blue translate-xy-right-bottom"></div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div id="div02">
+        <h3>scale, scaleX, scaleY</h3>
+
+        <div class="box red scaleX"></div>
+        <div class="box green scaleY"></div>
+        <div class="box blue scaleXY"></div>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div id="div03">
+        <h3>rotate</h3>
+
+        <div class="box rotate-left">
+            <img src="../../이미지/카리나4.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="box rotate-right">
+            <img src="../../이미지/카리나4.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="box rotate-left2">
+            <img src="../../이미지/카리나4.jpg" alt="" style="width: 100%;">
+        </div>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div id="div04">
+        <h3>skew, skewX, skewY</h3>
+
+        <div class="box red skew-x"></div>
+        <div class="box green skew-y"></div>
+        <div class="box blue skew-xy"></div>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <div id="div05">
+        <h3>transition</h3>
+
+        <div class="box big-box">
+            <div class="box small-box blue transition-x"></div>
+            <div class="box small-box green transition-xy" style="top: 140px;"></div>
+
+        </div>
+
+
+    </div>
+
+    <div id="div06">
+        <h3>animation</h3>
+
+        <div class="box red" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box big-box" id="box3">
+            <div class="box small-box blue"></div>
+        </div>
+        <div class="box" id="box4" style="position: relative;"></div>
+    </div>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>s
+
+</body>
+
+</html>

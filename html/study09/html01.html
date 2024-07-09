@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 사용하기</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+  <div class="container">
+
+    <h2>alert</h2>
+
+    <div>
+      <h3>기본 alert</h3>
+      <!-- 부트스트랩에서 제공하는 경고 메시지를 출력하는 공간태그 -->
+      <!-- div 태그에 class로 .alert를 사용하여 경고 메세지를 출력 -->
+      <!-- 부트스트랩 테마 컬러를 추가하여 사용 가능(alert-{테마컬러}) -->
+      <!-- 예) alert-primary, alert-success, alert-info, alert-secondary, alert-warning, alert-danger, alert-light, alert-dark -->
+      <div class="alert alert-primary">alert-primary</div>
+      <div class="alert alert-success">alert-success</div>
+      <div class="alert alert-info">alert-info</div>
+      <div class="alert alert-secondary">alert-secondary</div>
+      <div class="alert alert-warning">alert-warning</div>
+      <div class="alert alert-danger">alert-danger</div>
+      <div class="alert alert-light">alert-light</div>
+      <div class="alert alert-dark">alert-dark</div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>alert 내용 안에 링크 사용하기, alert-link</h3>
+      <!-- 기본 alert 안에 a 태그를 사용 후 class에 .alert-link를 추가하여 사용 -->
+      <!-- 그냥 링크와 다르게 조금 진하게 검은색으로 표시 -->
+      <div class="alert alert-primary">alert-primary <a href="#" class="alert-link">alert-link</a></div>
+      <div class="alert alert-primary">alert-primary <a href="#">alert-link</a></div>
+      <div class="alert alert-primary">alert-primary <a href="#" class="alert-link" style="text-decoration: none;">alert-link</a></div>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h3>기본 alert에 닫기 버튼 추가 및 닫을 때 애니메이션 추가</h3>
+      <!-- alert class에 alert-dismissible을 추가하여 기본 alert에 닫기 버튼을 추가할 수 있음 -->
+      <!-- alert를 사용한 div태그의 자식 태그에 .btn-close를 사용한 버튼 추가 해야 함 -->
+      <!-- button 태그에는 사용자 속성으로 data-bs-dismiss="alert"가 추가되어 있어야 함 -->
+
+      <!-- alert의 class에 .fade, .show를 추가하여 alert를 닫을 때 애니메이션 추가 -->
+
+      <div class="alert alert-primary alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>alert-primary</strong>를 사용한 alert '닫기' 버튼
+      </div>
+
+      <div class="alert alert-primary alert-dismissible fade show">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>alert-primary</strong>를 사용한 alert '닫기' 버튼 (fade show 애니메이션 추가)
+      </div>
+
+      <div class="alert alert-primary alert-dismissible">
+        <button type="button" class="btn-close"></button>
+        <strong>alert-primary</strong>를 사용한 alert '닫기' 버튼 클릭 시 (data-bs-dismiss 제거 - 제거 버튼 기능이 작동 안함)
+      </div>
+
+      <div class="alert alert-primary alert-dismissible">
+        <button type="button" data-bs-dismiss="alert"></button>
+        <strong>alert-primary</strong>를 사용한 alert '닫기' 버튼 클릭 시 (.btn-close 제거 - 제거 버튼이 안생김)
+      </div>
+    </div>
+
+
+    
+    <br><hr><br>
+
+    <h2>badges</h2>
+
+    <div>
+      <h3>기본 badges</h3>
+      <!-- 제목이나 게시판 글의 첫 부분이나 끝 부분에 추가되는 표식을 쉽게 만들기 위해 부트스트랩에서 미리 디자인 된 badges를 제공 -->
+      <!-- span 태그에 .badge 클래스를 추가, bg-{테마컬러}로 컬러 추가 가능 -->
+      
+      <h4>게시글의 제목 뒤에 badge 입력하기 <span class="badge bg-primary">badge</span></h4>
+      <h4>게시글의 제목 뒤에 badge 입력하기 <span class="badge bg-danger">new</span></h4>
+      <h4>게시글의 제목 뒤에 badge 입력하기 <span class="badge bg-info">7</span></h4>
+      
+      <br><hr><br>
+      
+      <h3>알약 모양 badge 사용, 버튼 안의 badge</h3>
+      <!-- 기본 badge를 사용한 태그에 .rounded-pill 추가 시, badge의 모양 변형 가능 -->
+      <!-- button 태그에 span 태그를 자식 태그로 사용 및 .badge 추가 시, 버튼 안에 badge 만들 수 있음 -->
+
+      <h4>알약 모양 badge 변경 <span class="badge bg-primary rounded-pill">badge</span></h4>
+      
+      <button type="button" class="btn btn-primary">기본 부트스트랩 버튼</button>
+      <button type="button" class="btn btn-primary">메세지 확인 <span class="badge bg-info">5</span></button>
+      <button type="button" class="btn btn-primary">경고 <span class="badge bg-danger">5</span></button>
+
+    </div>
+
+  </div>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

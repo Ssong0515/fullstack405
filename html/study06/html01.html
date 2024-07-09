@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div01 a:link {
+            font-size: 2em;
+            color: dodgerblue;
+            font-weight: bold;
+        }
+
+        #div01 a:visited {
+            font-size: 2em;
+            color: hotpink;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #div02 button, #div02 input {
+            min-height: 50px;
+            min-width: 150px;
+            padding: 16px;
+            margin: 5px;
+            font-size: 1.5em;
+        }
+
+        #div02 [type=button] {
+            min-height: 50px;
+            min-width: 150px;
+            padding: 16px;
+            margin: 5px;
+            font-size: 1.5em;
+            background-color: red;
+        }
+
+        #btn-click:active {
+            background-color: crimson;
+            border: 3px solid black;
+        }
+
+        #btn-hover:hover {
+            background-color: deepskyblue;
+            width: 200px;
+        }
+
+        #input-focus:focus {
+            background-color: khaki;
+            border: 5px dashed gray;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            min-width: 100px;
+        }
+
+        /* :nth-child()는 주로 table 태그에서 짝수 라인과 홀수 라인의 배경 색상을 변경 하는데 사용 함*/
+        /* even(짝수), odd(홀수) */
+        tbody tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        thead > tr {
+            background-color: darkgray;
+        }
+
+        li.new::after {
+            content: "NEW!!";
+            font-size: x-small;
+            padding: 2px 4px;
+            margin: 0px 10px;
+            border-radius: 2px;
+            background-color: red;
+            color: white;
+        }
+
+        li.sale::before {
+            content: "세일!! 오늘만!!";
+            background-color: gold;
+            color: black;
+            padding: 5px;
+            margin: 0 10px;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>가상 클래스 선택자</h2>
+        
+        <div id="div01">
+            <h3>:link, :visited</h3>
+
+            <div>
+                <a href="http://www.naver.com" target="_blank">네이버 홈페이지</a><br>
+                <a href="http://www.daum.net" target="_blank">다음 홈페이지</a><br>
+                <a href="http://www.google.co.kr" target="_blank">구글 홈페이지</a>
+            </div>
+        </div>
+
+        <div id="div02">
+            <h3>:activ, :hover, :focus</h3>
+
+            <div>
+                <button type="button" id="btn-click">클릭 시 변경</button><br>
+                <button type="button" id="btn-hover">마우스를 올리면 변경</button><br>
+                <input type="text" id="input-focus" placeholder="포커스가 주어지면 변경">
+
+            </div>
+        </div>
+
+        <div id="div03">
+            <h3>:nth-child</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>팀이름</th>
+                        <th>이름</th>
+                        <th>포지션</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>뉴진스</td>
+                        <td>민지</td>
+                        <td>랩</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>뉴진스</td>
+                        <td>하니</td>
+                        <td>보컬</td>
+                    </tr><tr>
+                        <td>3</td>
+                        <td>뉴진스</td>
+                        <td>다니엘</td>
+                        <td>보컬</td>
+                    </tr><tr>
+                        <td>4</td>
+                        <td>뉴진스</td>
+                        <td>해린</td>
+                        <td>보컬</td>
+                    </tr><tr>
+                        <td>5</td>
+                        <td>뉴진스</td>
+                        <td>혜인</td>
+                        <td>랩</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div id="div05">
+            <h3>::before, ::after</h3>
+
+            <div>
+                <h3>제품 목록</h3>
+                <ul>
+                    <li class="new">제품 A</li>
+                    <li class="sale">제품 B</li>
+                    <li class="new">제품 C</li>
+                    <li>제품 D</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

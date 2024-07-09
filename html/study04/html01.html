@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 스타일</title>
+
+    <style>
+        .book1 {
+            
+            list-style-type: none;
+        }
+
+        .book2 {
+            list-style-type: upper-alpha;
+        }
+        .book3 {
+            list-style-image: url("dot.png");
+        }
+        .book4 {
+            list-style-position: inside;
+        }
+        .book5 {
+            list-style: decimal-leading-zero inside;
+        }
+        .book6 {
+            list-style: inside url("dot.png");
+        }
+        .star1 {
+            caption-side: bottom;
+        }
+        .star2 {
+            caption-side: bottom;
+            border: 1px solid black;
+        }
+        .star2 td, .star2 th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        .star3 {
+            caption-side: bottom;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .star3 td, .star3 th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;            
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>목록 스타일</h2>
+
+        <h3>도시 시리즈</h3>
+        <ul class="book1">
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ul>
+        <ol class="book2">
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ol>
+
+        <br><br>
+
+        <h2>list-style-image</h2>
+
+        <ul class="book3">
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ul>
+
+        <br><br>
+
+        <h2>list-style-position</h2>
+
+        <ul>
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ul>
+        <ul class="book4">
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ul>
+
+        <br><br>
+
+        <h2>list-style</h2>
+
+        <ul class="book5">
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ul>
+
+        <ul class="book6">
+            <li>Do it! 시리즈</li>
+            <li>첫 코딩 시리즈</li>
+            <li>된다 시리즈</li>
+        </ul>
+
+        <br><hr><br>
+
+        <div>
+            <h2>표 스타일</h2>
+            <br>
+
+            <h3>caption-side</h3>
+
+            <table border="1">
+                <caption>연예인 목록</caption>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>나연</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table border="1" class="star1">
+                <caption>연예인 목록</caption>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>나연</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+            </table>
+
+            <br>
+
+    <!-- table의 border 속성 사용 안함 -->
+            <table class="star2">
+                <caption>연예인 목록</caption>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>나연</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+            </table>
+
+            <br>
+
+<!-- td, th에 적용 된 border 하나로 합치기 -->
+            <table class="star3">
+                <caption>연예인 목록</caption>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>나연</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

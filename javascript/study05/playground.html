@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+
+    <script>
+
+        $(document).ready(function (){
+            $("#btn01").on("click", function (){
+                $("#div01").css({
+                    'top' : '100px',
+                    'left' : '100px'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="bg-black" style="width: 100px; height: 100px; position: relative" id="div01"></div>
+
+<button type="button" class="btn btn-primary" id="btn01">move</button>
+</body>
+</html>
